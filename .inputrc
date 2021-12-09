@@ -1,0 +1,32 @@
+$include /etc/inputrc
+set bell-style none
+set editing-mode vi
+set keymap vi
+$if mode=vi
+  set keymap vi-command
+  "\e[A": history-search-backward
+  "\e[B": history-search-forward
+  "\C-p": history-search-backward
+  "\C-n": history-search-forward
+  set keymap vi-insert
+  "\e[A": history-search-backward
+  "\e[B": history-search-forward
+  "\C-p": history-search-backward
+  "\C-n": history-search-forward
+  # ^p check for partial match in history
+  #bind -m vi-insert "\C-p":dynamic-complete-history
+  # ^n cycle through the list of partial matches
+  #bind -m vi-insert "\C-n":menu-complete
+  "\C-l": clear-screen
+$endif
+$if mode=emacs
+  "\e[A":history-search-backward
+  "\e[B":history-search-forward
+  "\C-p":history-search-backward
+  "\C-n":history-search-forward
+$endif
+# Make Bash 8bit clean
+#set meta-flag on
+#set input-meta on
+#set output-meta on
+#set convert-meta off
