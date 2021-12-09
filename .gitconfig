@@ -1,0 +1,10 @@
+[user]
+	name = Koncz László
+	email = konlaasz@gmail.com
+[color]
+	ui = auto
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %Cblue<%cE>%Creset' --abbrev-commit --date=relative
+	wdiff = diff --color-words
+[push]
+	default = simple
