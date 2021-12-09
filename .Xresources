@@ -1,0 +1,71 @@
+#include ".xrdb/look-zenburn.xrdb"
+#include ".xrdb/urxvt.xrdb"
+#include ".xrdb/xterm.xrdb"
+
+!{{{ Xft
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.hinting:    true
+Xft.hintstyle:  hintfull
+Xft.rgba:       rgb
+!}}}
+
+!{{{ Xcursor
+!Xcursor.theme: Adwaita
+!Xcursor.theme: Neutral
+Xcursor.size:  16
+!}}}
+
+!{{{ URxvt
+!!! see https://wiki.archlinux.org/index.php/Rxvt-unicode#Creating_.7E.2F.Xresources
+! URxvt.termName:         rxvt-unicode-256color
+URxvt.geometry:         80x16
+URxvt.scrollBar:        false
+URxvt.urgentOnBell:     true
+URxvt.reverseVideo:     false
+URxvt.saveLines:        20000
+
+URxvt.font:             xft:Hack:style=Book:pixelsize=13
+URxvt.boldFont:         xft:Hack:style=Bold:pixelsize=13
+URxvt.italicFont:       xft:Hack:style=Oblique:pixelsize=13
+URxvt.boldItalicFont:   xft:Hack:style=BoldOblique:pixelsize=13
+URxvt.letterSpace:      -1
+
+! perl extensions
+URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select
+! urxvt-perls/clipboard
+URxvt.keysym.M-c:           perl:clipboard:copy
+URxvt.keysym.M-v:           perl:clipboard:paste
+URxvt.keysym.M-C-v:         perl:clipboard:paste_escaped
+! If true, PRIMARY overwrites clipboard
+URxvt.clipboard.autocopy:   true
+! urxvt-perls/keyboard-select
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+URxvt.keysym.M-s:           perl:keyboard-select:search
+! urxvt-perls/url-select
+URxvt.keysym.M-u:           perl:url-select:select_next
+! If true, selected URLs are copied to PRIMARY
+URxvt.url-select.autocopy:  false
+URvxt.url-select.button:    2
+URxvt.url-select.launcher:  firefox
+URxvt.url-select.underline: false
+
+!URxvt*background: #000000
+!URxvt*foreground: #bfbdc0
+!URxvt*color0: #000000
+!URxvt*color1: #8a110e
+!URxvt*color2: #669f3d
+!URxvt*color3: #b3751e
+!URxvt*color4: #493d9f
+!URxvt*color5: #9216a3
+!URxvt*color6: #198a9c
+!URxvt*color7: #bfbdc0
+!URxvt*color8: #686773
+!URxvt*color9: #fc5166
+!URxvt*color10: #63ff54
+!URxvt*color11: #ffd75c
+!URxvt*color12: #766eff
+!URxvt*color13: #e151ff
+!URxvt*color14: #57ffec
+!URxvt*color15: #ffffff
+!}}}
