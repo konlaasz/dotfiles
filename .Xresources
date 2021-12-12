@@ -25,10 +25,10 @@ URxvt.urgentOnBell:     true
 URxvt.reverseVideo:     false
 URxvt.saveLines:        20000
 
-URxvt.font:             xft:Hack:style=Book:pixelsize=13
+URxvt.font:             xft:Hack:style=Regular:pixelsize=13
 URxvt.boldFont:         xft:Hack:style=Bold:pixelsize=13
-URxvt.italicFont:       xft:Hack:style=Oblique:pixelsize=13
-URxvt.boldItalicFont:   xft:Hack:style=BoldOblique:pixelsize=13
+URxvt.italicFont:       xft:Hack:style=Italic:pixelsize=13
+URxvt.boldItalicFont:   xft:Hack:style=BoldItalic:pixelsize=13
 URxvt.letterSpace:      -1
 
 ! perl extensions
