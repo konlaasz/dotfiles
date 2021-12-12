@@ -26,6 +26,8 @@ gxkb &>/dev/null &
 #kbdd &
 # keyboard navigation
 keynav daemonize &
+# autorepeat for faster navigation
+# xset r rate 300 50 &
 # aggressive screen blanking
 xset s 180 &
 #xset dpms 0 0 120
