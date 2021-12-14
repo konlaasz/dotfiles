@@ -1,0 +1,47 @@
+#
+# ~/.mplayer/config
+#
+# see: http://ubuntuforums.org/showthread.php?t=77329
+
+[default]
+#vo=xv
+#vf-add=expand=::::0:10/6:
+#vf-add=expand=::::0:16/9:
+
+#ao=null
+#ao=alsa
+ao=pulse
+#ao=jack
+
+fs=1
+#xineramascreen=1
+nolirc=true
+#msglevel=all=0
+
+#cache=4096
+
+user-agent="Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:25.0) Gecko/20100101 Firefox/25.0"
+
+#showsubtitles=0
+sub-fuzziness=2
+subcp=latin1
+subfont-text-scale=3.0
+sub-bg-color=0
+sub-bg-alpha=100
+
+[snd]
+profile-desc="profile for playing audio"
+ao=pulse
+vo=null
+noautosub=true
+nosub=true
+nolirc=true
+user-agent="Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:25.0) Gecko/20100101 Firefox/25.0"
+#cache=4096
+
+[pyradio]
+softvol=1
+softvol-max=300
+volstep=1
+volume=50
+
