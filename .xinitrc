@@ -35,6 +35,8 @@ xset s 180 &
 redshift &
 # disable the touchpad when typing
 #syndaemon &
+# urxvt daemon
+urxvtd -f -o -q &
 # check package updates
 #chuck &>/dev/null &
 
