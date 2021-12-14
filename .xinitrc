@@ -19,15 +19,15 @@ xrdb -merge ~/.Xresources
 # Set xkb layout
 #setxkbmap -layout 'us,dk,hu(qwerty)' -option 'grp:alt_shift_toggle'
 #setxkbmap -layout 'ro,hu(qwerty),de(qwerty),dk' -option 'grp:alt_shift_toggle'
-gxkb &>/dev/null &
-# turn Caps Lock into Esc
-#xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 # per-window keyboard layout switching
 #kbdd &
+gxkb &>/dev/null &
+# turn Caps Lock into Esc
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+# autorepeat for faster navigation
+#xset r rate 300 50 &
 # keyboard navigation
 keynav daemonize &
-# autorepeat for faster navigation
-# xset r rate 300 50 &
 # aggressive screen blanking
 xset s 180 &
 #xset dpms 0 0 120
