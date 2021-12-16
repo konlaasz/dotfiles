@@ -12,4 +12,4 @@ export PATH=$PATH:$HOME/.local/bin
 
 # wayland
 #[[ -z $DISPLAY && $XDG_VTNR -eq 2 ]] && exec cage -d firefox
-#[ "$(tty)" = "/dev/tty2" ] && exec sway
+[[ -z $DISPLAY && $XDG_VTNR -eq 2 ]] && exec qtile start -b wayland
