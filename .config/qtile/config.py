@@ -26,12 +26,16 @@
 
 from typing import List  # noqa: F401
 
-from libqtile import bar, layout, widget
+from libqtile import bar, layout, qtile, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 
 mod = "mod4"
-terminal = "urxvtc"
+
+if qtile.core.name == "x11":
+    terminal = "urxvtc"
+elif qtile.core.name == "wayland":
+    terminal = "kitty"
 
 keys = [
     # Switch between windows
