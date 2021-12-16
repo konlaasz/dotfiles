@@ -91,10 +91,10 @@
      The Lucy font family
        <http://www.deepwood.net/software/lucy/>  */
 
-!#define COLOR_FG                  #DCDCCC
-#define COLOR_FG                  #D7D7C8
-!#define COLOR_BG                  #3A3A3A
-#define COLOR_BG                  #1C1C1C
+#define COLOR_FG                  #DCDCCC
+!#define COLOR_FG                  #D7D7C8
+#define COLOR_BG                  #3A3A3A
+!#define COLOR_BG                  #1C1C1C
 
 #define COLOR_TERM_BLACK          COLOR_BG
 #define COLOR_TERM_DARK_RED       #CF8383
