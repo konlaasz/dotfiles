@@ -22,6 +22,12 @@ export VISUAL=$EDITOR
 export BROWSER=firefox
 export MPD_HOST=eta.home
 export TERMINAL=urxvt
+export XDG_CONFIG_HOME=$HOME/.config
+# for ranger
+export RANGER_LOAD_DEFAULT_RC=false
+export TERMCMD=urxvtc
+export PYGMENTIZE_STYLE=zenburn
+export PYTHONOPTIMIZE=2
 # }}}
 
 # command prompt {{{
@@ -68,8 +74,6 @@ __git_complete config __git_main
 
 # ranger {{{
 [ -n "$RANGER_LEVEL" ] && PS1="$PS1"'(R) '
-
-export PYTHONOPTIMIZE=2
 
 function ranger-cd {
     if [ -z "$RANGER_LEVEL" ]
