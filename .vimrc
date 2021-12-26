@@ -7,6 +7,16 @@ set encoding=utf-8
 colorscheme zenburn
 set termguicolors
 
+if &term =~ '256color'
+  " disable Background Color Erase (BCE) so that color schemes
+  " render properly when inside 256-color tmux and GNU screen.
+  " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+  set t_ut=
+endif
+
+" Don't redraw while executing macros (good performance config)
+set lazyredraw
+
 set ruler                      " show line and column information
 "set number                     " show line numbers
 syntax on
@@ -24,7 +34,7 @@ set shiftwidth=4
 set autoindent
 set smartindent
 
-" trailing whitespace
+" highlight trailing whitespace
 match ErrorMsg '\s\+$'
 
 " search down into subfolders
