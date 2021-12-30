@@ -185,6 +185,10 @@ screens = [
 #                    configured_keyboards=['us', 'dk', 'hu qwerty'],
 #                    display_map={'us': 'us', 'dk': 'dk', 'hu qwerty': 'hu'}
 #                ),
+                widget.Cmus(
+                    play_color="#8f8f8f",
+                    noplay_color="#3a3a3a"
+                ),
                 widget.Systray(),
                 widget.Clock(format='%y.%m.%d %V.%u %H:%M'),
             ],
