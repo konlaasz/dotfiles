@@ -146,8 +146,8 @@ for index, grp in enumerate(groups):
 layouts = [
     layout.Max(),
     layout.Bsp(
-        border_normal="#1d3557",
-        border_focus="#457b9d",
+        border_normal="#3f3f3f",
+        border_focus="#8f8f8f",
         border_width=1,
         fair=True,
         grow_amount=6,
@@ -170,11 +170,13 @@ screens = [
             [
                 widget.GroupBox(
                     border_width=2,
-                    fmt='{}',
-                    active="#f0dfaf",
-                    inactive="#dcdccc",
-                    highlight_color=['#3f3f3f', '#f0dfaf'],
+                    active="#c3bf9f",
+                    inactive="#8f8f8f",
+                    highlight_color=['#3f3f3f', '#c3bf9f'],
                     highlight_method="block",
+                    this_current_screen_border='#3a3a3a',
+                    urgent_border='#cf8383',
+                    urgent_text='#cf8383',
                     margin=2,
                     spacing=2,
                 ),
