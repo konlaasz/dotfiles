@@ -11,7 +11,7 @@ DEFAULTWM=qtile
 #cbatticon -u 17 -i symbolic -c "systemctl suspend" -l 15 -r 6 &
 cbatticon -u 17 -i standard -c "systemctl suspend" -l 15 -r 6 &
 # audio
-systemctl --user start pulseaudio.service &
+systemctl --user start pipewire-pulse.service &
 # volume icon
 pa-applet --disable-notifications &
 # x settings
