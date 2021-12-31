@@ -11,7 +11,6 @@ echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" 
 ### New install:
 ```
 git clone --bare git@github.com:konlaasz/dotfiles.git $HOME/.dotfiles
-echo ".dotfiles" >> .gitignore
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 config config --local status.showUntrackedFiles no
 config checkout
