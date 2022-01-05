@@ -112,6 +112,11 @@ keys = [
     Key([], "XF86MonBrightnessDown", lazy.spawn("light -U 5")),
     Key([], "XF86MonBrightnessUp", lazy.spawn("light -A 5")),
 
+    Key([mod], 'z', lazy.spawn('cmus-remote --prev')),
+    Key([mod], 'x', lazy.spawn('cmus-remote --play')),
+    Key([mod], 'c', lazy.spawn('cmus-remote --pause')),
+    Key([mod], 'v', lazy.spawn('cmus-remote --stop')),
+    Key([mod], 'b', lazy.spawn('cmus-remote --next')),
 ]
 
 groups = [
