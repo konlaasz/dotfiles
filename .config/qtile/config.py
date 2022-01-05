@@ -181,7 +181,7 @@ screens = [
                     highlight_method="block",
                     this_current_screen_border='#3a3a3a',
                     urgent_border='#cf8383',
-                    urgent_text='#cf8383',
+                    urgent_text='#3a3a3a',
                     margin=2,
                     spacing=2,
                 ),
