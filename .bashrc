@@ -8,10 +8,10 @@
 
 # history {{{
 #HISTFILE=/tmp/.bash_history_${USER}
-HISTSIZE=500000
-HISTFILESIZE=500000
-HISTCONTROL=ignorespace:erasedups
-HISTIGNORE='&:history*'
+export HISTSIZE=500000
+export HISTFILESIZE=500000
+export HISTCONTROL=ignoreboth:erasedups
+export HISTIGNORE='&:history*'
 shopt -s histappend histreedit histverify
 #set +o history
 # }}}
