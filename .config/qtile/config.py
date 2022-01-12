@@ -75,10 +75,14 @@ keys = [
     Key([mod, "control"], "k", lazy.layout.grow_up(),
         desc="Grow window up"),
 
-    Key([mod], 'comma', lazy.screen.prev_group(skip_managed=True, )),
-    Key([mod], 'period', lazy.screen.next_group(skip_managed=True, )),
-    Key([mod], 'Left', lazy.screen.prev_group(skip_managed=True, )),
-    Key([mod], 'Right', lazy.screen.next_group(skip_managed=True, )),
+    Key([mod], 'comma', lazy.screen.prev_group(skip_managed=True, ),
+        desc="Move focus to the previous group"),
+    Key([mod], 'period', lazy.screen.next_group(skip_managed=True, ),
+        desc="Move focus to the next group"),
+    Key([mod], 'Left', lazy.screen.prev_group(skip_managed=True, ),
+        desc="Move focus to the previous group"),
+    Key([mod], 'Right', lazy.screen.next_group(skip_managed=True, ),
+        desc="Move focus to the next group"),
 
     Key([mod], "n", lazy.layout.normalize(),
         desc="Reset all window sizes"),
