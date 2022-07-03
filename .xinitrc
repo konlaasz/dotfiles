@@ -4,24 +4,23 @@
 # vim: ft=sh:ts=4:sw=4:sts=4
 
 # WM
-DEFAULTWM=qtile
+DEFAULTWM=awesome
 
 # WM-independent preloaded processes
+# Audio
+systemctl --user start pipewire-pulse.service &
 # battery icon
 #cbatticon -u 17 -i symbolic -c "systemctl suspend" -l 15 -r 6 &
-cbatticon -u 17 -i standard -c "systemctl suspend" -l 15 -r 6 &
-# audio
-systemctl --user start pipewire-pulse.service &
-# volume icon
-pa-applet --disable-notifications &
+nm-applet &
+#cbatticon -u 17 -i standard -c "systemctl suspend" -l 15 -r 6 &
 # x settings
 xrdb -merge ~/.Xresources
 # Set xkb layout
 #setxkbmap -layout 'us,dk,hu(qwerty)' -option 'grp:alt_shift_toggle'
 #setxkbmap -layout 'ro,hu(qwerty),de(qwerty),dk' -option 'grp:alt_shift_toggle'
 # per-window keyboard layout switching
-#kbdd &
 gxkb &>/dev/null &
+#kbdd &
 # turn Caps Lock into Esc
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 # autorepeat for faster navigation
@@ -31,14 +30,16 @@ keynav daemonize &
 # aggressive screen blanking
 xset s 180 &
 #xset dpms 0 0 120
-# blue light filter
+# Blue light filter
 redshift &
 # disable the touchpad when typing
 #syndaemon &
 # urxvt daemon
-urxvtd -f -o -q &
+#urxvtd -f -o -q &
 # check package updates
 #chuck &>/dev/null &
+# Volume icon
+pa-applet --disable-notifications &
 
 # use the WM specified as $1, falling back to DEFAULTWM if $1 is empty
 WM=${1:-$DEFAULTWM}
