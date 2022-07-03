@@ -33,7 +33,7 @@ from libqtile.lazy import lazy
 mod = "mod4"
 
 if qtile.core.name == "x11":
-    terminal = "urxvtc"
+    terminal = "urxvt"
 elif qtile.core.name == "wayland":
     terminal = "kitty"
 
