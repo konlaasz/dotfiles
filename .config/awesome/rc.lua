@@ -338,20 +338,20 @@ globalkeys = awful.util.table.join(
               {description = "show the menubar", group = "launcher"}),
 
     -- Backlight control
-    awful.key({ }, "XF86MonBrightnessUp", function () brightness_widget:inc() end, {description = "increase brightness", group = "custom"}),
-    awful.key({ }, "XF86MonBrightnessDown", function () brightness_widget:dec() end, {description = "decrease brightness", group = "custom"}),
+    awful.key({ }, "XF86MonBrightnessUp", function () brightness_widget:inc() end, {description = "Increase brightness", group = "screen"}),
+    awful.key({ }, "XF86MonBrightnessDown", function () brightness_widget:dec() end, {description = "Decrease brightness", group = "screen"}),
 
     --awful.key({ }, "XF86MonBrightnessDown", function () awful.spawn("light -U 5") end, {description = "increase screen brightness", group = "screen"}),
     --awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn("light -A 5") end, {description = "decrease screen brightness", group = "screen"})
 
     -- Volume control
+    --awful.key({ }, "XF86AudioRaiseVolume", function() volume_widget:inc(5) end, {description = "Raise volume", group = "audio"}),
+    --awful.key({ }, "XF86AudioLowerVolume", function() volume_widget:dec(5) end, {description = "Lower volume", group = "audio"}),
+    --awful.key({ }, "XF86AudioMute", function() volume_widget:toggle() end, {description = "Toggle mute", group = "audio"}),
+
     --awful.key({ }, "XF86AudioRaiseVolume", function () inc_volume(volume_widget) end, {description = "Raise volume", group = "audio"}),
     --awful.key({ }, "XF86AudioLowerVolume", function () dec_volume(volume_widget) end, {description = "Lower volume", group = "audio"}),
-    --awful.key({ }, "XF86AudioMute", function () mute_volume(volume_widget) end, {description = "Toggle mute (Fn+F8)", group = "audio"}),
-
-    --awful.key({ }, "XF86AudioRaiseVolume", function() volume_widget:inc(5) end),
-    --awful.key({ }, "XF86AudioLowerVolume", function() volume_widget:dec(5) end),
-    --awful.key({ }, "XF86AudioMute", function() volume_widget:toggle() end)
+    --awful.key({ }, "XF86AudioMute", function () mute_volume(volume_widget) end, {description = "Toggle mute", group = "audio"}),
 
     -- Hide/show wibox
     awful.key({ modkey }, "b",
