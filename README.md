@@ -4,21 +4,19 @@
 ```
 git init --bare $HOME/.dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-config config --local status.showUntrackedFiles no
 echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
+config config --local status.showUntrackedFiles no
 ```
-\* Remember to make the alias permanent
 
 ### New install:
 ```
 git clone --bare git@github.com:konlaasz/dotfiles.git $HOME/.dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
 config config --local status.showUntrackedFiles no
 config checkout
 ```
 \* Backup any config files worth merging
-
-\*\* Remember to make the alias permanent
 
 Different branches can be used for different systems.
 
