@@ -52,7 +52,7 @@ session.path.set = ./.session
 
 # Close torrents when disk-space is low.
 #
-schedule2 = low_diskspace,5,60,close_low_diskspace=1G
+schedule2 = low_diskspace,5,60,close_low_diskspace=500M
 
 # The IP address reported to the tracker.
 #
