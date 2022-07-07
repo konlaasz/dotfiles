@@ -506,6 +506,7 @@ awful.rules.rules = {
     -- Set specific programs to always appear on a certain tag
     { rule = { instance = "firefox" }, properties = { tag = " β " } },
     { rule = { instance = "calibre" }, properties = { tag = " γ " } },
+    { rule = { class = "jpdftweak-Main" }, properties = { tag = " δ " } },
 }
 -- }}}
 
