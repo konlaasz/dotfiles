@@ -20,12 +20,12 @@ shopt -s histappend histreedit histverify
 export EDITOR=vim
 export VISUAL=$EDITOR
 export BROWSER=firefox
-export MPD_HOST=eta.home
+export MPD_HOST=zeta.home
 export TERMINAL=urxvt
 export XDG_CONFIG_HOME=$HOME/.config
 # for ranger
 export RANGER_LOAD_DEFAULT_RC=false
-export TERMCMD=urxvtc
+export TERMCMD=urxvt
 export PYGMENTIZE_STYLE=zenburn
 export PYTHONOPTIMIZE=2
 # }}}
