@@ -345,6 +345,10 @@ globalkeys = awful.util.table.join(
     --awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn("light -A 5") end, {description = "decrease screen brightness", group = "screen"})
 
     -- Volume control
+    awful.key({ }, "XF86AudioRaiseVolume", function() awful.spawn("pw-volume change +2.5%") end, {description = "Raise volume", group = "audio"}),
+    awful.key({ }, "XF86AudioLowerVolume", function() awful.spawn("pw-volume change -2.5%") end, {description = "Lower volume", group = "audio"}),
+    awful.key({ }, "XF86AudioMute", function() awful.spawn("pw-volume mute toggle") end, {description = "Toggle mute", group = "audio"}),
+
     --awful.key({ }, "XF86AudioRaiseVolume", function() volume_widget:inc(5) end, {description = "Raise volume", group = "audio"}),
     --awful.key({ }, "XF86AudioLowerVolume", function() volume_widget:dec(5) end, {description = "Lower volume", group = "audio"}),
     --awful.key({ }, "XF86AudioMute", function() volume_widget:toggle() end, {description = "Toggle mute", group = "audio"}),
