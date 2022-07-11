@@ -1,7 +1,7 @@
 #
 # ~/.bashrc
 #
-# vim:ft=sh:ts=2:sw=2:sts=2:fdm=marker
+# vim:ft=sh:ts=4:sw=4:sts=4:fdm=marker
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
