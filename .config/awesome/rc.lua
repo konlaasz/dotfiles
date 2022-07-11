@@ -338,24 +338,24 @@ globalkeys = awful.util.table.join(
               {description = "show the menubar", group = "launcher"}),
 
     -- Backlight control
-    awful.key({ }, "XF86MonBrightnessUp", function () brightness_widget:inc() end, {description = "Increase brightness", group = "screen"}),
-    awful.key({ }, "XF86MonBrightnessDown", function () brightness_widget:dec() end, {description = "Decrease brightness", group = "screen"}),
+    awful.key({ }, "XF86MonBrightnessUp", function () brightness_widget:inc() end, {description = "increase brightness", group = "screen"}),
+    awful.key({ }, "XF86MonBrightnessDown", function () brightness_widget:dec() end, {description = "decrease brightness", group = "screen"}),
 
     --awful.key({ }, "XF86MonBrightnessDown", function () awful.spawn("light -U 5") end, {description = "increase screen brightness", group = "screen"}),
     --awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn("light -A 5") end, {description = "decrease screen brightness", group = "screen"})
 
     -- Volume control
-    awful.key({ }, "XF86AudioRaiseVolume", function() awful.spawn("pw-volume change +2%") end, {description = "Raise volume", group = "audio"}),
-    awful.key({ }, "XF86AudioLowerVolume", function() awful.spawn("pw-volume change -2%") end, {description = "Lower volume", group = "audio"}),
-    awful.key({ }, "XF86AudioMute", function() awful.spawn("pw-volume mute toggle") end, {description = "Toggle mute", group = "audio"}),
+    awful.key({ }, "XF86AudioRaiseVolume", function() awful.spawn("pw-volume change +2%") end, {description = "raise volume", group = "audio"}),
+    awful.key({ }, "XF86AudioLowerVolume", function() awful.spawn("pw-volume change -2%") end, {description = "lower volume", group = "audio"}),
+    awful.key({ }, "XF86AudioMute", function() awful.spawn("pw-volume mute toggle") end, {description = "toggle mute", group = "audio"}),
 
-    --awful.key({ }, "XF86AudioRaiseVolume", function() volume_widget:inc(5) end, {description = "Raise volume", group = "audio"}),
-    --awful.key({ }, "XF86AudioLowerVolume", function() volume_widget:dec(5) end, {description = "Lower volume", group = "audio"}),
-    --awful.key({ }, "XF86AudioMute", function() volume_widget:toggle() end, {description = "Toggle mute", group = "audio"}),
+    --awful.key({ }, "XF86AudioRaiseVolume", function() volume_widget:inc(5) end, {description = "raise volume", group = "audio"}),
+    --awful.key({ }, "XF86AudioLowerVolume", function() volume_widget:dec(5) end, {description = "lower volume", group = "audio"}),
+    --awful.key({ }, "XF86AudioMute", function() volume_widget:toggle() end, {description = "toggle mute", group = "audio"}),
 
-    --awful.key({ }, "XF86AudioRaiseVolume", function () inc_volume(volume_widget) end, {description = "Raise volume", group = "audio"}),
-    --awful.key({ }, "XF86AudioLowerVolume", function () dec_volume(volume_widget) end, {description = "Lower volume", group = "audio"}),
-    --awful.key({ }, "XF86AudioMute", function () mute_volume(volume_widget) end, {description = "Toggle mute", group = "audio"}),
+    --awful.key({ }, "XF86AudioRaiseVolume", function () inc_volume(volume_widget) end, {description = "raise volume", group = "audio"}),
+    --awful.key({ }, "XF86AudioLowerVolume", function () dec_volume(volume_widget) end, {description = "lower volume", group = "audio"}),
+    --awful.key({ }, "XF86AudioMute", function () mute_volume(volume_widget) end, {description = "toggle mute", group = "audio"}),
 
     -- Hide/show wibox
     awful.key({ modkey }, "b",
@@ -363,7 +363,7 @@ globalkeys = awful.util.table.join(
           myscreen = awful.screen.focused()
           myscreen.mywibox.visible = not myscreen.mywibox.visible
        end,
-       {description = "toggle statusbar"}
+       {description = "toggle statusbar", group = "awesome"}
     )
 
 )
@@ -508,7 +508,7 @@ awful.rules.rules = {
     },
 
     -- Set specific programs to always appear on a certain tag
-    { rule = { instance = "firefox" }, properties = { tag = " β " } },
+    { rule = { class = "firefox" }, properties = { tag = " β " } },
     { rule = { instance = "calibre" }, properties = { tag = " γ " } },
     { rule = { class = "jpdftweak-Main" }, properties = { tag = " δ " } },
 }
