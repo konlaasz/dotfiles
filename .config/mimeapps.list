@@ -1,0 +1,52 @@
+[Default Applications]
+application/epub+zip=calibre-ebook-viewer.desktop
+application/pdf=org.gnome.Evince.desktop
+application/x-ext-djvu=org.gnome.Evince.desktop
+application/x-extension-htm=userapp-Firefox-H2TAZX.desktop
+application/x-extension-html=userapp-Firefox-H2TAZX.desktop
+application/x-extension-shtml=userapp-Firefox-H2TAZX.desktop
+application/x-extension-xht=userapp-Firefox-H2TAZX.desktop
+application/x-extension-xhtml=userapp-Firefox-H2TAZX.desktop
+application/x-mozilla-bookmarks=firefox.desktop
+application/xhtml+xml=userapp-Firefox-H2TAZX.desktop
+image/bmp=sxiv.desktop
+image/gif=sxiv.desktop
+image/jpeg=sxiv.desktop
+image/jpg=sxiv.desktop
+image/png=sxiv.desktop
+image/tiff=sxiv.desktop;org.gnome.Evince.desktop
+image/vnd.djvu=org.gnome.Evince.desktop
+image/x-bmp=sxiv.desktop
+image/x-png=sxiv.desktop
+image/x-portable-anymap=sxiv.desktop
+image/x-portable-bitmap=sxiv.desktop
+image/x-portable-graymap=sxiv.desktop
+image/x-tga=sxiv.desktop
+image/x-xpixmap=sxiv.desktop
+inode/directory=ranger.desktop
+text/html=userapp-Firefox-H2TAZX.desktop
+x-scheme-handler/chrome=userapp-Firefox-H2TAZX.desktop
+x-scheme-handler/ftp=userapp-Firefox-H2TAZX.desktop
+x-scheme-handler/http=userapp-Firefox-H2TAZX.desktop
+x-scheme-handler/https=userapp-Firefox-H2TAZX.desktop
+
+[Added Associations]
+application/octet-stream=org.gnome.Evince.desktop
+application/x-extension-htm=userapp-Firefox-C2TDVY.desktop;userapp-Pale Moon-RP7XUY.desktop;userapp-Firefox-H2TAZX.desktop
+application/x-extension-html=userapp-Firefox-C2TDVY.desktop;userapp-Pale Moon-RP7XUY.desktop;userapp-Firefox-H2TAZX.desktop
+application/x-extension-shtml=userapp-Firefox-C2TDVY.desktop;userapp-Pale Moon-RP7XUY.desktop;userapp-Firefox-H2TAZX.desktop
+application/x-extension-xht=userapp-Firefox-C2TDVY.desktop;userapp-Pale Moon-RP7XUY.desktop;userapp-Firefox-H2TAZX.desktop
+application/x-extension-xhtml=userapp-Firefox-C2TDVY.desktop;userapp-Pale Moon-RP7XUY.desktop;userapp-Firefox-H2TAZX.desktop
+application/x-php=org.gnome.Evince.desktop
+application/xhtml+xml=userapp-Firefox-C2TDVY.desktop;userapp-Pale Moon-RP7XUY.desktop;userapp-Firefox-H2TAZX.desktop
+application/zip=firefox.desktop
+binary/octet-stream=sxiv.desktop
+text/html=userapp-Firefox-C2TDVY.desktop;userapp-Pale Moon-RP7XUY.desktop;userapp-Firefox-H2TAZX.desktop
+x-scheme-handler/chrome=userapp-Firefox-C2TDVY.desktop;userapp-Pale Moon-RP7XUY.desktop;userapp-Firefox-H2TAZX.desktop
+x-scheme-handler/ftp=userapp-Firefox-C2TDVY.desktop;userapp-Pale Moon-RP7XUY.desktop;userapp-Firefox-H2TAZX.desktop
+x-scheme-handler/http=userapp-Firefox-C2TDVY.desktop;userapp-Pale Moon-RP7XUY.desktop;userapp-Firefox-H2TAZX.desktop
+x-scheme-handler/https=userapp-Firefox-C2TDVY.desktop;userapp-Pale Moon-RP7XUY.desktop;userapp-Firefox-H2TAZX.desktop
+
+[Removed Associations]
+audio/x-scpls=vim.desktop
+inode/directory=easytag.desktop
