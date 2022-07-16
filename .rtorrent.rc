@@ -16,24 +16,24 @@
 
 # Maximum and minimum number of peers to connect to per torrent.
 #
-throttle.min_peers.normal.set = 99
-throttle.max_peers.normal.set = 100
+throttle.min_peers.normal.set = 40
+throttle.max_peers.normal.set = 52
 
 # Same as above but for seeding completed torrents.
 # "-1" = same as downloading.
 #
 throttle.min_peers.seed.set = 10
-throttle.max_peers.seed.set = 50
+throttle.max_peers.seed.set = 52
 
 # Maximum number of simultaneous uploads per torrent.
 #
-throttle.max_uploads.set = 15
+throttle.max_uploads.set = 8
 
 # Global upload and download rate in KiB.
 # "0" for unlimited.
 #
-throttle.global_down.max_rate.set_kb = 0
-throttle.global_up.max_rate.set_kb = 0
+throttle.global_down.max_rate.set = 200
+throttle.global_up.max_rate.set = 28
 
 # Default directory to save the downloaded torrents.
 #
