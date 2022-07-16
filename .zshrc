@@ -82,8 +82,8 @@ export TERMCMD=urxvt
 export PYGMENTIZE_STYLE=zenburn
 export PYTHONOPTIMIZE=2
 
-# Add (R) to prompt if ranger is running
-[ -n "$RANGER_LEVEL" ] && PS1="$PS1"'(R) '
+# Prepend (R) to right side prompt if ranger is running
+[ -n "$RANGER_LEVEL" ] && RPROMPT='(R) '"$RPROMPT"
 
 # Use ranger to switch directories
 ranger-cd () {
