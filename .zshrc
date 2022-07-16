@@ -22,6 +22,11 @@ EDITOR=vim
 VISUAL=$EDITOR
 BROWSER=firefox
 
+bindkey '\e[A' history-beginning-search-backward
+bindkey '\e[B' history-beginning-search-forward
+bindkey '^p' history-beginning-search-backward
+bindkey '^n' history-beginning-search-forward
+
 # Sourced files {{{
 
 # git prompt script
