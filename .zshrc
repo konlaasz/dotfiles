@@ -36,9 +36,7 @@ BROWSER=firefox
 # Prompt {{{
 
 # Regular prompt
-PROMPT=' %F{green}%~%b%f '
-# TODO: git integration as in bash
-# PS1=' \[\e[0;32m\]\W\[\e[0m\]$(__git_ps1 " (%s)") '
+precmd () { __git_ps1 " %F{green}%1~%b%f" "%s " }
 RPROMPT='[%F{white}%?%f]'
 
 # Red root prompt (this needs to go in /root/.zshrc)
