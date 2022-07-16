@@ -18,6 +18,28 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Prompt {{{
+
+# Regular prompt
+PROMPT=' %F{green}%~%b%f '
+# TODO: git integration as in bash
+# PS1=' \[\e[0;32m\]\W\[\e[0m\]$(__git_ps1 " (%s)") '
+RPROMPT='[%F{white}%?%f]'
+
+# Red root prompt (this needs to go in /root/.zshrc)
+if [ $(id -u) -eq 0 ]; then
+    PROMPT='%B%F{red}%n%f%b:%F{magenta}%~%f%b '
+    RPROMPT='[%F{white}%?%f]'
+fi
+
+# Grey ssh prompt
+if [ "$SSH_CONNECTION" ]; then
+    PROMPT='[%B%F{black}%n@%M%f%b:%F{green}%~%f%b] '
+    RPROMPT='[%F{white}%?%f]'
+fi
+
+# }}}
+
 # config (.dotfiles git repo) {{{
 
 # src: https://www.atlassian.com/git/tutorials/dotfiles
