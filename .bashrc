@@ -61,6 +61,10 @@ fi
 # load git prompt script
 [ -r /usr/share/git/completion/git-prompt.sh ] && . /usr/share/git/completion/git-prompt.sh
 
+# load fzf completion and key bindings
+[ -r /usr/share/fzf/completion.bash ] && . /usr/share/fzf/completion.bash
+[ -r /usr/share/fzf/key-bindings.bash ] && . /usr/share/fzf/key-bindings.bash
+
 # }}}
 
 # config (.dotfiles git repo) {{{
@@ -92,5 +96,22 @@ function ranger-cd {
 
 # This binds Ctrl-O to ranger-cd:
 bind '"\C-o":" ranger-cd\C-m"'
+
+# }}}
+
+# ripgrep-all+fzf {{{
+rga-fzf() {
+	RG_PREFIX="rga --files-with-matches"
+	local file
+	file="$(
+		FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
+			fzf --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
+				--phony -q "$1" \
+				--bind "change:reload:$RG_PREFIX {q}" \
+				--preview-window="70%:wrap"
+	)" &&
+	echo "opening $file" &&
+	xdg-open "$file"
+}
 
 # }}}
