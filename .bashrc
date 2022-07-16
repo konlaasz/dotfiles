@@ -6,6 +6,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# unset ^S and ^Q bindings
+stty stop undef
+stty start undef
+
 # history {{{
 #HISTFILE=/tmp/.bash_history_${USER}
 export HISTSIZE=500000
