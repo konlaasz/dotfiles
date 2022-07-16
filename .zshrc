@@ -18,6 +18,10 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+EDITOR=vim
+VISUAL=$EDITOR
+BROWSER=firefox
+
 # Prompt {{{
 
 # Regular prompt
