@@ -102,6 +102,6 @@ ranger-cd () {
 }
 
 # Bind Ctrl-O to ranger-cd:
-bindkey -s '^o' 'ranger-cd\n'
+bindkey -s '^o' ' ranger-cd\n'
 
 # }}}
