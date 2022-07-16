@@ -8,3 +8,5 @@
 	wdiff = diff --color-words
 [push]
 	default = simple
+[core]
+	editor = /usr/bin/vim
