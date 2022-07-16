@@ -5,7 +5,7 @@
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
-HISTSIZE=1000
+HISTSIZE=50001
 SAVEHIST=50000
 setopt extendedglob nomatch notify
 unsetopt autocd beep
@@ -17,6 +17,13 @@ zstyle :compinstall filename '/home/konl/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+setopt HIST_IGNORE_SPACE
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
 
 EDITOR=vim
 VISUAL=$EDITOR
