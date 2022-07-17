@@ -25,6 +25,11 @@ URxvt.urgentOnBell:     true
 URxvt.reverseVideo:     false
 URxvt.saveLines:        20000
 
+! ISO 14755 mode
+URxvt.iso14755: true
+! keycap picture insert mode
+URxvt.iso14755_52: false
+
 URxvt.font:             xft:Hack:style=Regular:pixelsize=13
 URxvt.boldFont:         xft:Hack:style=Bold:pixelsize=13
 URxvt.italicFont:       xft:Hack:style=Italic:pixelsize=13
