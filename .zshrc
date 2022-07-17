@@ -1,3 +1,4 @@
+
 #
 # ~/.zshrc
 #
@@ -11,7 +12,11 @@ setopt extendedglob nomatch notify
 unsetopt autocd beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
+
 # The following lines were added by compinstall
+
+zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+zstyle ':completion:*' verbose true
 zstyle :compinstall filename '/home/konl/.zshrc'
 
 autoload -Uz compinit
