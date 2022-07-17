@@ -39,8 +39,8 @@ URxvt.letterSpace:      -1
 ! perl extensions
 URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select
 ! urxvt-perls/clipboard
-URxvt.keysym.C-M-c          perl:clipboard:copy
-URxvt.keysym.C-M-v          perl:clipboard:paste
+URxvt.keysym.C-M-c:         eval:selection_to_clipboard
+URxvt.keysym.C-M-v:         eval:paste_clipboard
 URxvt.keysym.C-M-b:         perl:clipboard:paste_escaped
 ! If true, PRIMARY overwrites clipboard
 URxvt.clipboard.autocopy:   true
