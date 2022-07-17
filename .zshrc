@@ -1,8 +1,7 @@
-
 #
 # ~/.zshrc
 #
-# vim:ft=sh:ts=4:sw=4:sts=4:fdm=marker
+# vim:ft=zsh:ts=4:sw=4:sts=4:fdm=marker
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
