@@ -41,16 +41,13 @@ bindkey '^n' history-beginning-search-forward
 
 # Aliases {{{
 
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
 alias less='less -i'
 alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
 alias pacman='pacman --color=always'
-
 alias pgrep='pgrep -afl'
-
 alias ping='ping -c 3'
 
 # }}}
