@@ -46,7 +46,7 @@ alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
 alias less='less -i'
 alias ls='ls --color=auto'
-alias pacman='pacman --color=always'
+alias pacman='pacman --color=auto'
 alias pgrep='pgrep -afl'
 alias ping='ping -c 3'
 
