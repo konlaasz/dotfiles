@@ -251,19 +251,19 @@ __git_ps1_colorize_gitstring ()
 {
 	if [[ -n ${ZSH_VERSION-} ]]; then
 		local c_red='%F{red}'
-		local c_green='%F{green}'
+		local c_default='%F{default}'
 		local c_lblue='%F{blue}'
 		local c_clear='%f'
 	else
 		# Using \[ and \] around colors is necessary to prevent
 		# issues with command line editing/browsing/completion!
 		local c_red='\[\e[31m\]'
-		local c_green='\[\e[32m\]'
+		local c_default='\[\e[37m\]'
 		local c_lblue='\[\e[1;34m\]'
 		local c_clear='\[\e[0m\]'
 	fi
 	local bad_color=$c_red
-	local ok_color=$c_green
+	local ok_color=$c_default
 	local flags_color="$c_lblue"
 
 	local branch_color=""
