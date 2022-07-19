@@ -59,6 +59,12 @@ alias ping='ping -c 3'
 # fzf completion and key bindings
 [ -r /usr/share/fzf/completion.zsh ] && . /usr/share/fzf/completion.zsh
 [ -r /usr/share/fzf/key-bindings.zsh ] && . /usr/share/fzf/key-bindings.zsh
+# Rebind ^R to redo in vicmd mode
+bindkey -M vicmd -r "^R"
+bindkey -M vicmd "^R" redo
+# Use ! in vicmd mode
+# TODO: stop eating the last character
+bindkey -M vicmd '!' fzf-history-widget
 
 # }}}
 
