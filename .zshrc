@@ -60,6 +60,8 @@ alias ping='ping -c 3'
 
 # Git prompt script
 [ -r /usr/share/git/completion/git-prompt.sh ] && . /usr/share/git/completion/git-prompt.sh
+# Color git prompt
+GIT_PS1_SHOWCOLORHINTS=true
 
 # Regular prompt
 precmd () { __git_ps1 " %F{green}%1~%b%f" "%s " }
