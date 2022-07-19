@@ -25,6 +25,7 @@ Xcursor.size:  16
 URxvt.geometry:         80x16
 URxvt.scrollBar:        false
 URxvt.urgentOnBell:     true
+URxvt.visualBell:       true
 URxvt.reverseVideo:     false
 URxvt.saveLines:        20000
 
