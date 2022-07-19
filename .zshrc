@@ -51,14 +51,10 @@ alias ping='ping -c 3'
 
 # }}}
 
-# Sourced files {{{
-
-# git prompt script
-[ -r /usr/share/git/completion/git-prompt.sh ] && . /usr/share/git/completion/git-prompt.sh
-
-# }}}
-
 # Prompt {{{
+
+# Git prompt script
+[ -r /usr/share/git/completion/git-prompt.sh ] && . /usr/share/git/completion/git-prompt.sh
 
 # Regular prompt
 precmd () { __git_ps1 " %F{green}%1~%b%f" "%s " }
