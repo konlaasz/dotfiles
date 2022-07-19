@@ -59,11 +59,15 @@ alias ping='ping -c 3'
 # Prompt {{{
 
 # Git prompt script
-[ -r /usr/share/git/completion/git-prompt.sh ] && . /usr/share/git/completion/git-prompt.sh
-# Show info about directory state
-GIT_PS1_SHOWDIRTYSTATE=true
+[ -r ~/.git-prompt.sh ] && . ~/.git-prompt.sh
 # Color git prompt
 GIT_PS1_SHOWCOLORHINTS=true
+# Notify about unstaged (*) and staged (+) changes
+GIT_PS1_SHOWDIRTYSTATE=true
+# Notify about stashes ($)
+GIT_PS1_SHOWSTASHSTATE=true
+# Notify about untracked (%)
+GIT_PS1_SHOWUNTRACKEDFILES=true
 
 # Regular prompt
 precmd () { __git_ps1 " %F{green}%1~%b%f" "%s " }
