@@ -4,9 +4,6 @@
 # vim:ft=zsh:ts=4:sw=4:sts=4:fdm=marker
 
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.zsh_history
-HISTSIZE=50001
-SAVEHIST=50000
 setopt extendedglob nomatch notify
 unsetopt autocd beep
 bindkey -v
@@ -22,6 +19,16 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+EDITOR=vim
+VISUAL=$EDITOR
+BROWSER=firefox
+
+# History {{{
+
+HISTFILE=~/.zsh_history
+HISTSIZE=50001
+SAVEHIST=50000
+
 setopt hist_ignore_space
 setopt hist_expire_dups_first
 setopt hist_ignore_dups
@@ -30,14 +37,12 @@ setopt hist_find_no_dups
 setopt hist_save_no_dups
 setopt share_history
 
-EDITOR=vim
-VISUAL=$EDITOR
-BROWSER=firefox
-
-bindkey '\e[A' history-beginning-search-backward
-bindkey '\e[B' history-beginning-search-forward
 bindkey '^p' history-beginning-search-backward
 bindkey '^n' history-beginning-search-forward
+bindkey '\e[A' history-beginning-search-backward
+bindkey '\e[B' history-beginning-search-forward
+
+# }}}
 
 # Aliases {{{
 
