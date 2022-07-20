@@ -41,7 +41,7 @@ URxvt.iso14755: true
 URxvt.iso14755_52: false
 
 ! perl extensions
-URxvt.perl-ext-common:      default,-confirm-paste,-selection-popup,-option-popup,clipboard,eval,keyboard-select,url-select
+URxvt.perl-ext-common:      default,-confirm-paste,-option-popup,-selection-popup,clipboard,eval,keyboard-select,resize-font,url-select
 ! If true, PRIMARY overwrites clipboard
 URxvt.clipboard.autocopy:   true
 ! copy and paste
@@ -59,4 +59,10 @@ URxvt.url-select.autocopy:  false
 URvxt.url-select.button:    2
 URxvt.url-select.launcher:  firefox
 URxvt.url-select.underline: false
+! resize-font
+URxvt.resize-font.step:     2
+URxvt.keysym.C-equal:       resize-font:bigger
+URxvt.keysym.C-minus:       resize-font:smaller
+URxvt.keysym.C-0:           resize-font:reset
+URxvt.keysym.C-question:    resize-font:show
 !}}}
