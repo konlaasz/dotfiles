@@ -99,6 +99,15 @@ fi
 
 # }}}
 
+# Vim buffer {{{
+
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd '^v' edit-command-line
+bindkey -M viins '^v' edit-command-line
+
+# }}}
+
 # conf (.dotfiles git repo) {{{
 
 # src: https://www.atlassian.com/git/tutorials/dotfiles
