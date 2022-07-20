@@ -41,7 +41,7 @@ URxvt.iso14755: true
 URxvt.iso14755_52: false
 
 ! perl extensions
-URxvt.perl-ext-common:      default,-selection-popup,-option-popup,clipboard,eval,keyboard-select,url-select
+URxvt.perl-ext-common:      default,-confirm-paste,-selection-popup,-option-popup,clipboard,eval,keyboard-select,url-select
 ! If true, PRIMARY overwrites clipboard
 URxvt.clipboard.autocopy:   true
 ! copy and paste
