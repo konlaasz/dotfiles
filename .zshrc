@@ -36,6 +36,7 @@ setopt hist_ignore_all_dups
 setopt hist_find_no_dups
 setopt hist_save_no_dups
 setopt share_history
+setopt EXTENDED_HISTORY
 
 bindkey '^p' history-beginning-search-backward
 bindkey '^n' history-beginning-search-forward
