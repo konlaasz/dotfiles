@@ -14,15 +14,25 @@ export KEYTIMEOUT=1
 setopt extendedglob nomatch notify
 unsetopt autocd beep
 
-# The following lines were added by compinstall
+# Completion {{{
 
-zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
-zstyle ':completion:*' verbose true
-zstyle :compinstall filename '/home/konl/.zshrc'
-
-autoload -Uz compinit
+autoload -U compinit
+zstyle ':completion:*' menu select
+#zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+#zstyle ':completion:*' verbose true
+zmodload zsh/complist
 compinit
-# End of lines added by compinstall
+
+# Include hidden files
+_comp_options+=(globdots)
+
+# Use Vi keys for navigating the completion menu
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+
+# }}}
 
 # History {{{
 
