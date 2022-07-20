@@ -60,9 +60,9 @@ URvxt.url-select.button:    2
 URxvt.url-select.launcher:  firefox
 URxvt.url-select.underline: false
 ! resize-font
-URxvt.resize-font.step:     2
+URxvt.resize-font.step:     1
 URxvt.keysym.C-equal:       resize-font:bigger
 URxvt.keysym.C-minus:       resize-font:smaller
 URxvt.keysym.C-0:           resize-font:reset
-URxvt.keysym.C-question:    resize-font:show
+URxvt.keysym.C-slash:       resize-font:show
 !}}}
