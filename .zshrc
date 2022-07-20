@@ -9,6 +9,7 @@ BROWSER=firefox
 
 # Vi mode
 bindkey -v
+export KEYTIMEOUT=1
 
 setopt extendedglob nomatch notify
 unsetopt autocd beep
