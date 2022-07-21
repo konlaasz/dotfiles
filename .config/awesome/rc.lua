@@ -208,7 +208,9 @@ awful.screen.connect_for_each_screen(function(s)
             wibox.widget.systray(),
             --volume_widget{
             --    widget_type = 'arc',
-            --    device = 'pulse'},
+            --    step = 2,
+            --    thickness = 2,
+            --    device = 'pipewire'},
             brightness_widget{
                 type = 'arc',
                 program = 'light',
@@ -345,17 +347,13 @@ globalkeys = awful.util.table.join(
     --awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn("light -A 5") end, {description = "decrease screen brightness", group = "screen"})
 
     -- Volume control
+    --awful.key({ }, "XF86AudioRaiseVolume", function() volume_widget:inc() end, {description = "raise volume", group = "audio"}),
+    --awful.key({ }, "XF86AudioLowerVolume", function() volume_widget:dec() end, {description = "lower volume", group = "audio"}),
+    --awful.key({ }, "XF86AudioMute", function() volume_widget:toggle() end, {description = "toggle mute", group = "audio"}),
+
     awful.key({ }, "XF86AudioRaiseVolume", function() awful.spawn("pw-volume change +2%") end, {description = "raise volume", group = "audio"}),
     awful.key({ }, "XF86AudioLowerVolume", function() awful.spawn("pw-volume change -2%") end, {description = "lower volume", group = "audio"}),
     awful.key({ }, "XF86AudioMute", function() awful.spawn("pw-volume mute toggle") end, {description = "toggle mute", group = "audio"}),
-
-    --awful.key({ }, "XF86AudioRaiseVolume", function() volume_widget:inc(5) end, {description = "raise volume", group = "audio"}),
-    --awful.key({ }, "XF86AudioLowerVolume", function() volume_widget:dec(5) end, {description = "lower volume", group = "audio"}),
-    --awful.key({ }, "XF86AudioMute", function() volume_widget:toggle() end, {description = "toggle mute", group = "audio"}),
-
-    --awful.key({ }, "XF86AudioRaiseVolume", function () inc_volume(volume_widget) end, {description = "raise volume", group = "audio"}),
-    --awful.key({ }, "XF86AudioLowerVolume", function () dec_volume(volume_widget) end, {description = "lower volume", group = "audio"}),
-    --awful.key({ }, "XF86AudioMute", function () mute_volume(volume_widget) end, {description = "toggle mute", group = "audio"}),
 
     -- Hide/show wibox
     awful.key({ modkey }, "b",
