@@ -20,6 +20,12 @@ Xft.rgba:       rgb
 Xcursor.size:  16
 !}}}
 
+!{{{ Sxiv
+Sxiv.background:  #3A3A3A
+Sxiv.foreground:  #DCDCCC
+Sxiv.font:        xft:Hack:style=Regular:pixelsize=13
+!}}}
+
 !{{{ URxvt
 ! see: https://wiki.archlinux.org/index.php/Rxvt-unicode#Creating_.7E.2F.Xresources
 URxvt.geometry:         80x16
