@@ -220,7 +220,7 @@ awful.screen.connect_for_each_screen(function(s)
                 tooltip = true },
             batteryarc_widget({
                 show_current_level = true,
-                arc_thickness = 1,}),
+                arc_thickness = 2,}),
             mytextclock,
         },
     }
