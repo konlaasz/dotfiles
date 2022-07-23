@@ -99,6 +99,12 @@ fi
 
 # }}}
 
+# Syntax highlighting {{{
+
+[ -r /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# }}}
+
 # Vim buffer {{{
 
 autoload -U edit-command-line
