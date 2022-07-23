@@ -68,6 +68,29 @@ alias ping='ping -c 3'
 
 # }}}
 
+# Cursor {{{
+
+# Use grey cursor in command mode
+# (Colors are from ~/.xrdb/look-zenburn.xrdb)
+zle-keymap-select zle-line-init () {
+    case $KEYMAP in
+        vicmd)      print -n -- '\e]12;#8F8F8F\a';;
+        viins|main) print -n -- '\e]12;#DCDCCC\a';;
+    esac
+    zle reset-prompt
+}
+
+# Reset color for next command
+zle-line-finish () {
+    print -n -- '\e]12;#DCDCCC\a'
+}
+
+zle -N zle-line-init
+zle -N zle-line-finish
+zle -N zle-keymap-select
+
+# }}}
+
 # Prompt {{{
 
 # Git prompt script
