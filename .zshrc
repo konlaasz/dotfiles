@@ -13,6 +13,10 @@ export KEYTIMEOUT=1
 
 setopt AUTO_PUSHD EXTENDEDGLOB NO_BEEP NOMATCH NOTIFY
 
+# Disable ^s and ^q
+stty stop undef
+stty start undef
+
 # Completion {{{
 
 autoload -U compinit
