@@ -17,6 +17,9 @@ setopt AUTO_PUSHD EXTENDEDGLOB NO_BEEP NOMATCH NOTIFY
 stty stop undef
 stty start undef
 
+# Disable highlighting of pasted text
+zle_highlight=('paste:none')
+
 # Completion {{{
 
 autoload -U compinit
