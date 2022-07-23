@@ -11,8 +11,7 @@ BROWSER=firefox
 bindkey -v
 export KEYTIMEOUT=1
 
-setopt extendedglob nomatch notify
-unsetopt autocd beep
+setopt AUTO_PUSHD EXTENDEDGLOB NO_BEEP NOMATCH NOTIFY
 
 # Completion {{{
 
