@@ -45,7 +45,7 @@ class Zenburn(ColorScheme):
                 fg = 174
             if context.directory:
                 attr |= bold
-                fg = 108
+                fg = 66
             elif context.executable and not \
                     any((context.media, context.container,
                          context.fifo, context.socket)):
@@ -89,7 +89,7 @@ class Zenburn(ColorScheme):
             if context.hostname:
                 fg = 174 if context.bad else 180
             elif context.directory:
-                fg = 108
+                fg = 66
             elif context.tab:
                 if context.good:
                     bg = 180
