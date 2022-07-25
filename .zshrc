@@ -112,14 +112,14 @@ GIT_PS1_SHOWCOLORHINTS=true
 GIT_PS1_SHOWDIRTYSTATE=true
 # Notify about stashes ($)
 GIT_PS1_SHOWSTASHSTATE=true
-# Notify about untracked (%)
+# Notify about untracked files (%)
 GIT_PS1_SHOWUNTRACKEDFILES=true
 
 # Regular prompt
 precmd () { __git_ps1 " %F{green}%1~%b%f" "%s " }
 RPROMPT='[%F{white}%?%f]'
 
-# Red root prompt (this needs to go in /root/.zshrc)
+# Red root prompt (this needs to also go in /root/.zshrc)
 if [ $(id -u) -eq 0 ]; then
     PROMPT='%B%F{red}%n%f%b:%F{magenta}%~%f%b '
     RPROMPT='[%F{white}%?%f]'
