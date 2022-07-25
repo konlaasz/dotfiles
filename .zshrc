@@ -23,8 +23,8 @@ zle_highlight=('paste:none')
 # Completion {{{
 
 zstyle ':completion:*' menu select
-#zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
-#zstyle ':completion:*' verbose true
+zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+zstyle ':completion:*' verbose true
 # Needed by git-completion.zsh
 zstyle ':completion:*:*:git:*' script /usr/share/git/completion/git-completion.bash
 fpath=(~/.local/share/zsh/functions $fpath)
