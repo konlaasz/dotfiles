@@ -29,6 +29,7 @@ Sxiv.font:        xft:Hack:style=Regular:pixelsize=13
 !{{{ URxvt
 ! see: https://wiki.archlinux.org/index.php/Rxvt-unicode#Creating_.7E.2F.Xresources
 URxvt.geometry:         80x16
+urxvt*cursorBlink:      false
 URxvt.scrollBar:        false
 URxvt.urgentOnBell:     true
 URxvt.visualBell:       true
