@@ -39,14 +39,14 @@ URxvt.letterSpace:      -1
 
 ! ISO 14755 mode
 URxvt.iso14755: true
-! keycap picture insert mode
+! Keycap picture insert mode
 URxvt.iso14755_52: false
 
-! perl extensions
+! Perl extensions
 URxvt.perl-ext-common:      default,-confirm-paste,-option-popup,-selection-popup,clipboard,eval,keyboard-select,resize-font,url-select
 ! If true, PRIMARY overwrites clipboard
 URxvt.clipboard.autocopy:   true
-! copy and paste
+! Copy and paste
 URxvt.keysym.C-M-c:         eval:selection_to_clipboard
 URxvt.keysym.C-M-v:         eval:paste_clipboard
 ! urxvt-perls/clipboard
@@ -75,24 +75,40 @@ URxvt*background:              #3A3A3A
 URxvt*pointerColor:            #DCDCCC
 URxvt*pointerColorBackground:  #3A3A3A
 
-URxvt*colorIT:   #FFFFFF
 URxvt*colorBD:   #FFFFFF
+URxvt*colorIT:   #FFFFFF
 URxvt*colorUL:   #FFFFFF
 
+! Black
 URxvt*color0:    #1C1C1C
+! Dark red
 URxvt*color1:    #CF8383
+! Dark green
 URxvt*color2:    #60B48A
+! Dark yellow
 URxvt*color3:    #FFD7A7
+! Dark blue
 URxvt*color4:    #6C6C9C
+! Dark magenta
 URxvt*color5:    #DC8CC3
+! Dark cyan
 URxvt*color6:    #8CD0D3
+! Light grey
 URxvt*color7:    #D7D7C8
+! Dark grey
 URxvt*color8:    #8F8F8F
+! Light red
 URxvt*color9:    #EF9F9F
+! Light green
 URxvt*color10:   #C3BF9F
+! Light yellow
 URxvt*color11:   #EFEFAF
+! Light blue
 URxvt*color12:   #94BFF3
+! Light magenta
 URxvt*color13:   #EC93D3
+! Light cyan
 URxvt*color14:   #93E0E3
+! White
 URxvt*color15:   #FFFFFF
 !}}}
