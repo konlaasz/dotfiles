@@ -3,16 +3,16 @@
 !
 ! vim:fdm=marker
 
+!{{{ Xcursor
+Xcursor.size:  16
+!}}}
+
 !{{{ Xft
 Xft.dpi:        96
 Xft.antialias:  true
 Xft.hinting:    true
 Xft.hintstyle:  hintfull
 Xft.rgba:       rgb
-!}}}
-
-!{{{ Xcursor
-Xcursor.size:  16
 !}}}
 
 !{{{ Sxiv
