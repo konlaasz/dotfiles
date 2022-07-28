@@ -1,11 +1,7 @@
 #
-# ~/.zshrc
+# ~/.zshrc: Executed for interactive shells
 #
 # vim:ft=zsh:ts=4:sw=4:sts=4:fdm=marker
-
-EDITOR=vim
-VISUAL=$EDITOR
-BROWSER=firefox
 
 # Vi mode
 bindkey -v
