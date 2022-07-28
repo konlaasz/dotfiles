@@ -79,7 +79,7 @@ alias ping='ping -c 3'
 # Cursor {{{
 
 # Use grey cursor in command mode
-# (Colors are from ~/.xrdb/look-zenburn.xrdb)
+# (Use colors from ~/.Xresources)
 zle-keymap-select zle-line-init () {
     case $KEYMAP in
         vicmd)      print -n -- '\e]12;#8F8F8F\a';;
