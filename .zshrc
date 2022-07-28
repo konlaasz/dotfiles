@@ -118,7 +118,7 @@ RPROMPT='[%F{white}%?%f]'
 
 # Red root prompt (this needs to also go in /root/.zshrc)
 if [ $(id -u) -eq 0 ]; then
-    PROMPT='%B%F{red}%n%f%b:%F{magenta}%~%f%b '
+    PROMPT='%B%F{red}%n%f%b:%F{magenta}%d%f%b '
     RPROMPT='[%F{white}%?%f]'
 fi
 
