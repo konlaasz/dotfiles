@@ -351,9 +351,9 @@ globalkeys = awful.util.table.join(
     --awful.key({ }, "XF86AudioLowerVolume", function() volume_widget:dec() end, {description = "lower volume", group = "audio"}),
     --awful.key({ }, "XF86AudioMute", function() volume_widget:toggle() end, {description = "toggle mute", group = "audio"}),
 
-    awful.key({ }, "XF86AudioRaiseVolume", function() awful.spawn("pw-volume change +2%") end, {description = "raise volume", group = "audio"}),
-    awful.key({ }, "XF86AudioLowerVolume", function() awful.spawn("pw-volume change -2%") end, {description = "lower volume", group = "audio"}),
-    awful.key({ }, "XF86AudioMute", function() awful.spawn("pw-volume mute toggle") end, {description = "toggle mute", group = "audio"}),
+    --awful.key({ }, "XF86AudioRaiseVolume", function() awful.spawn("pw-volume change +2%") end, {description = "raise volume", group = "audio"}),
+    --awful.key({ }, "XF86AudioLowerVolume", function() awful.spawn("pw-volume change -2%") end, {description = "lower volume", group = "audio"}),
+    --awful.key({ }, "XF86AudioMute", function() awful.spawn("pw-volume mute toggle") end, {description = "toggle mute", group = "audio"}),
 
     -- Hide/show wibox
     awful.key({ modkey }, "b",
