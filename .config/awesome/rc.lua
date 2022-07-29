@@ -44,8 +44,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(awful.util.get_themes_dir() .. "zenburn/theme.lua")
-beautiful.wallpaper = os.getenv("HOME") .. "/.config/awesome/a.png"
+beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/zenburn/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
