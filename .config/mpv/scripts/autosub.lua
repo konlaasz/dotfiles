@@ -74,7 +74,7 @@ function download_subs(language)
         return false
     end
 
-    log('Searching ' .. language[1] .. ' subtitles ...', 30)
+    log('Searching for ' .. language[1] .. ' subtitles…', 30)
 
     -- Build the `subliminal` command, starting with the executable:
     local table = { args = { subliminal } }
