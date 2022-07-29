@@ -82,23 +82,6 @@ end
 -- }}}
 
 -- {{{ Menu
--- Create a launcher widget and a main menu
-myawesomemenu = {
-   { "hotkeys", function() return false, hotkeys_popup.show_help end},
-   { "manual", terminal .. " -e man awesome" },
-   { "edit config", editor_cmd .. " " .. awesome.conffile },
-   { "restart", awesome.restart },
-   { "quit", function() awesome.quit() end}
-}
-
-mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal }
-                                  }
-                        })
-
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-                                     menu = mymainmenu })
-
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
@@ -196,7 +179,6 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            --mylauncher,
             s.mytaglist,
             s.mylayoutbox,
             s.mypromptbox,
@@ -499,11 +481,6 @@ awful.rules.rules = {
         }
       }, properties = { floating = true }},
 
-    -- Add titlebars to normal clients and dialogs
-    { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = false }
-    },
-
     -- Set specific programs to always appear on a certain tag
     { rule = { class = "firefox" }, properties = { tag = " β " } },
     { rule = { instance = "calibre" }, properties = { tag = " γ " } },
@@ -525,56 +502,6 @@ client.connect_signal("manage", function (c)
         awful.placement.no_offscreen(c)
     end
 end)
-
--- Add a titlebar if titlebars_enabled is set to true in the rules.
-client.connect_signal("request::titlebars", function(c)
-    -- buttons for the titlebar
-    local buttons = awful.util.table.join(
-        awful.button({ }, 1, function()
-            client.focus = c
-            c:raise()
-            awful.mouse.client.move(c)
-        end),
-        awful.button({ }, 3, function()
-            client.focus = c
-            c:raise()
-            awful.mouse.client.resize(c)
-        end)
-    )
-
-    awful.titlebar(c) : setup {
-        { -- Left
-            awful.titlebar.widget.iconwidget(c),
-            buttons = buttons,
-            layout  = wibox.layout.fixed.horizontal
-        },
-        { -- Middle
-            { -- Title
-                align  = "center",
-                widget = awful.titlebar.widget.titlewidget(c)
-            },
-            buttons = buttons,
-            layout  = wibox.layout.flex.horizontal
-        },
-        { -- Right
-            awful.titlebar.widget.floatingbutton (c),
-            awful.titlebar.widget.maximizedbutton(c),
-            awful.titlebar.widget.stickybutton   (c),
-            awful.titlebar.widget.ontopbutton    (c),
-            awful.titlebar.widget.closebutton    (c),
-            layout = wibox.layout.fixed.horizontal()
-        },
-        layout = wibox.layout.align.horizontal
-    }
-end)
-
--- Enable sloppy focus, so that focus follows mouse.
---client.connect_signal("mouse::enter", function(c)
---    if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier
---        and awful.client.focus.filter(c) then
---        client.focus = c
---    end
---end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
