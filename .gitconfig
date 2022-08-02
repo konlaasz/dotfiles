@@ -10,3 +10,5 @@
 	default = simple
 [core]
 	editor = /usr/bin/vim
+[init]
+	defaultBranch = main
