@@ -4,7 +4,7 @@
 ```
 git init --bare $HOME/.dotfiles
 alias conf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-echo "alias conf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
+echo "alias conf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.{ba,z}shrc
 conf config --local status.showUntrackedFiles no
 ```
 
@@ -12,7 +12,7 @@ conf config --local status.showUntrackedFiles no
 ```
 git clone --bare git@github.com:konlaasz/dotfiles.git $HOME/.dotfiles
 alias conf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-echo "alias conf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
+echo "alias conf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.{ba,z}shrc
 conf config --local status.showUntrackedFiles no
 conf checkout
 ```
