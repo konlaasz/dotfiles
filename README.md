@@ -1,6 +1,7 @@
 # dotfiles
 
 ### Init:
+
 ```
 git init --bare $HOME/.dotfiles
 alias conf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -9,16 +10,23 @@ conf config --local status.showUntrackedFiles no
 ```
 
 ### New install:
+
 ```
 git clone --bare git@github.com:konlaasz/dotfiles.git $HOME/.dotfiles
 alias conf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 echo "alias conf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.{ba,z}shrc
 conf config --local status.showUntrackedFiles no
-conf checkout
 ```
+
 \* Backup any config files worth merging
 
-Different branches can be used for different systems.
+```
+conf checkout
+```
+
+---
+
+\* Different branches can be used for different systems.
 
 ---
 
