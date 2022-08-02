@@ -8,3 +8,5 @@ export PATH=$PATH:$HOME/.local/bin
 export EDITOR=vim
 export VISUAL=$EDITOR
 export BROWSER=firefox
+
+export CHECKUPDATES_DB=$HOME/.cache/checkupdates
