@@ -4,8 +4,10 @@ set titlestring=VIM:\ %-25.55F\ %a%r%m titlelen=70
 
 set encoding=utf-8
 
-colorscheme zenburn
-set termguicolors
+if &t_Co =~ "256"
+    colorscheme zenburn
+    set termguicolors
+endif
 
 if &term =~ '256color'
   " disable Background Color Erase (BCE) so that color schemes
