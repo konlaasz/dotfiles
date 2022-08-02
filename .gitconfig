@@ -1,14 +1,14 @@
-[user]
-	name = László Koncz
-	email = konlaasz@gmail.com
-[color]
-	ui = auto
 [alias]
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %Cblue<%cE>%Creset' --abbrev-commit --date=relative
 	wdiff = diff --color-words
-[push]
-	default = simple
+[color]
+	ui = auto
 [core]
 	editor = /usr/bin/vim
 [init]
 	defaultBranch = main
+[push]
+	default = simple
+[user]
+	name = László Koncz
+	email = konlaasz@gmail.com
