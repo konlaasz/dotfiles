@@ -26,8 +26,11 @@ zmodload zsh/complist
 compinit
 
 # Git completion
-zstyle ':completion:*:*:git:*' script /usr/share/git/completion/git-completion.bash
-fpath=(~/.local/share/zsh/functions $fpath)
+fpath=(~/.local/share/zsh/functions/Completion $fpath)
+# Do not include "DWIM" suggestions in git-checkout and git-switch completion.
+GIT_COMPLETION_CHECKOUT_NO_GUESS=1
+# Suggest all options, including options which are typically hidden.
+GIT_COMPLETION_SHOW_ALL=1
 
 # Include hidden files
 _comp_options+=(globdots)
