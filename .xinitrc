@@ -28,7 +28,7 @@ xset s 180 &
 # Set xkb layout
 setxkbmap -layout 'us,dk,hu(qwerty)' -option 'grp:alt_shift_toggle' &
 # Per-window keyboard layout switching
-gxkb &>/dev/null &
+gxkb > /dev/null 2>&1 &
 #kbdd &
 # Autorepeat for faster navigation
 #xset r rate 300 50 &
@@ -53,7 +53,7 @@ pa-applet --disable-notifications &
 # battery icon
 #cbatticon -u 17 -i standard -c "systemctl suspend" -l 15 -r 6 &
 # check package updates
-chuck &>/dev/null &
+chuck > /dev/null 2>&1 &
 # }}}
 
 # use the WM specified as $1, falling back to DEFAULTWM if $1 is empty
