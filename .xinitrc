@@ -1,3 +1,4 @@
+#!/bin/sh
 #
 # ~/.xinitrc: client init script used by xinit(1)
 #
