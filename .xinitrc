@@ -26,7 +26,7 @@ xset s 180 &
 
 # Keyboard {{{
 # Set xkb layout
-#setxkbmap -layout 'us,dk,hu(qwerty)' -option 'grp:alt_shift_toggle'
+setxkbmap -layout 'us,dk,hu(qwerty)' -option 'grp:alt_shift_toggle' &
 # Per-window keyboard layout switching
 gxkb &>/dev/null &
 #kbdd &
