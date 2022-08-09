@@ -3,6 +3,9 @@
 #
 # vim:ft=sh:ts=4:sw=4:sts=4:fdm=marker
 
+# Logging
+exec > ~/.xinit.log 2>&1
+
 # WM
 DEFAULTWM=awesome
 
