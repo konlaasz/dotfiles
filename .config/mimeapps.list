@@ -15,6 +15,7 @@ image/jpeg=sxiv.desktop
 image/jpg=sxiv.desktop
 image/png=sxiv.desktop
 image/tiff=sxiv.desktop;org.gnome.Evince.desktop
+image/vnd.djvu+multipage=org.gnome.Evince.desktop
 image/vnd.djvu=org.gnome.Evince.desktop
 image/x-bmp=sxiv.desktop
 image/x-png=sxiv.desktop
