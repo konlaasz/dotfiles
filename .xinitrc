@@ -75,11 +75,3 @@ case $WM in
     qtile)
         exec qtile start ;;
 esac
-
-# been there, done that
-# >>> the good:
-# awesome, dwm, evilwm, fluxbox, icewm, jwm, wmii, xmonad
-# >>> the bad:
-# aewm, openbox, subtle, w9wm, yeahwm
-# >>> the ugly:
-# enlightenment, twindy, echinus
