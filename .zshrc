@@ -188,7 +188,7 @@ export PYTHONOPTIMIZE=2
 # Use ranger to switch directories
 ranger-cd () {
     if [ -z "$RANGER_LEVEL" ]; then
-        local TMP="$(mktemp ranger.dir.XXXXXXXXXX)"
+        local TMP="$(mktemp /tmp/ranger.dir.XXXXXXXXXX)"
         /usr/bin/ranger --choosedir="$TMP" "${@:-${PWD}}"
         if [ -f "$TMP" ]; then
             local DIR="$(<"$TMP")"
