@@ -41,7 +41,7 @@ keynav daemonize &
 
 # Xrdb {{{
 # X settings
-xrdb -merge ~/.Xresources
+xrdb -merge ~/.Xresources &
 # }}}
 
 # Tray icons, etc. {{{
