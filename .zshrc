@@ -118,7 +118,13 @@ GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 
 # Regular prompt
-precmd () { __git_ps1 " %F{green}%1~%b%f" "%s " }
+precmd () {
+    # Set window title
+    echo -ne "\033]0;$PWD\007"
+    # Generate prompt (including git info, if applicable)
+    __git_ps1 " %F{green}%1~%b%f" "%s "
+}
+
 RPROMPT='[%F{white}%?%f]'
 
 # Red root prompt (this needs to also go in /root/.zshrc)
