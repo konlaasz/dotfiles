@@ -18,7 +18,7 @@ zle_highlight=('paste:none')
 
 precmd () {
     # Set window title
-    echo -ne "\033]0;$PWD\007"
+    print -Pn "\e]0;%~\a"
     # Generate prompt (including git info, if applicable)
     __git_ps1 " %F{green}%1~%b%f" "%s "
 }
