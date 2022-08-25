@@ -119,6 +119,9 @@ zle -N zle-keymap-select
 
 # Prompt {{{
 
+# PROMPT is set by precmd
+RPROMPT='[%F{white}%?%f]'
+
 # Git prompt script
 [ -r ~/.git-prompt.sh ] && . ~/.git-prompt.sh
 # Color git prompt
@@ -129,10 +132,6 @@ GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true
 # Notify about untracked files (%)
 GIT_PS1_SHOWUNTRACKEDFILES=true
-
-# Regular prompt
-# PROMPT is set by precmd
-RPROMPT='[%F{white}%?%f]'
 
 # }}}
 
