@@ -175,10 +175,6 @@ alias conf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 bindkey -M vicmd -r "^R"
 bindkey -M vicmd "^R" redo
 
-# Use ! in vicmd mode
-# TODO: stop eating the last character
-bindkey -M vicmd '!' fzf-history-widget
-
 #}}}
 
 # ranger {{{
