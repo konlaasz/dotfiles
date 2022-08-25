@@ -134,11 +134,6 @@ GIT_PS1_SHOWUNTRACKEDFILES=true
 # PROMPT is set by precmd
 RPROMPT='[%F{white}%?%f]'
 
-# Red root prompt (this needs to also go in /root/.zshrc)
-if [ $(id -u) -eq 0 ]; then
-    PROMPT='%B%F{red}%n%f%b:%F{magenta}%d%f%b '
-fi
-
 # }}}
 
 # Syntax highlighting {{{
