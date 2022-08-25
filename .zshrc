@@ -74,7 +74,7 @@ bindkey '\e[B' history-beginning-search-forward
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
-alias less='less -i'
+alias less='less -iM'
 alias ls='ls --color=auto'
 alias pgrep='pgrep -afl'
 alias ping='ping -c 3'
