@@ -20,7 +20,13 @@ precmd () {
     # Set window title
     print -Pn "\e]0;%~\a"
     # Generate prompt (including git info, if applicable)
-    __git_ps1 " %F{green}%1~%b%f" "%s "
+    if [ "$SSH_CONNECTION" ]; then
+        # Grey ssh prompt
+        __git_ps1 "%B%F{black}%n@%M%f%b:%F{green}%~%f%b" "%s "
+    else
+        # Minimal regular prompt
+        __git_ps1 " %F{green}%1~%b%f" "%s "
+    fi
 }
 
 # Completion {{{
@@ -131,11 +137,6 @@ RPROMPT='[%F{white}%?%f]'
 # Red root prompt (this needs to also go in /root/.zshrc)
 if [ $(id -u) -eq 0 ]; then
     PROMPT='%B%F{red}%n%f%b:%F{magenta}%d%f%b '
-fi
-
-# Grey ssh prompt
-if [ "$SSH_CONNECTION" ]; then
-    PROMPT='[%B%F{black}%n@%M%f%b:%F{green}%~%f%b] '
 fi
 
 # }}}
