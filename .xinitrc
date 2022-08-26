@@ -47,8 +47,6 @@ xrdb -merge ~/.Xresources &
 # Tray icons, etc. {{{
 # urxvt daemon
 #urxvtd -f -o -q &
-# Network Manager applet
-nm-applet &
 # Volume applet
 pa-applet --disable-notifications &
 # battery icon
