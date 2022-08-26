@@ -10,6 +10,18 @@ DEFAULTWM=awesome
 exec > ~/.xinit.log 2>&1
 # }}}
 
+# Sourced scripts and settings {{{
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+    for SCRIPT in /etc/X11/xinit/xinitrc.d/?*.sh; do
+        [ -x "$SCRIPT" ] && . "$SCRIPT"
+    done
+    unset SCRIPT
+fi
+
+[ -f ~/.Xresources ] && xrdb -merge ~/.Xresources &
+[ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap &
+# }}}
+
 # WM-independent preloaded processes {{{
 
 # Audio {{{
@@ -37,11 +49,6 @@ gxkb > /dev/null 2>&1 &
 keynav daemonize &
 # Disable the touchpad when typing
 #syndaemon &
-# }}}
-
-# Xrdb {{{
-# X settings
-xrdb -merge ~/.Xresources &
 # }}}
 
 # Tray applets, etc. {{{
