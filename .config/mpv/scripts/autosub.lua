@@ -171,7 +171,7 @@ function autosub_allowed()
     local active_format = mp.get_property('file-format')
 
     if not bools.auto then
-        mp.msg.warn('Automatic downloading disabled!')
+        mp.msg.warn('Automatic downloading disabled')
         return false
     elseif duration < 900 then
         mp.msg.warn('Video is less than 15 minutes\n' ..
@@ -198,7 +198,7 @@ function autosub_allowed()
             local excluded = directory:find(escaped_exclude)
 
             if excluded then
-                mp.msg.warn('This path is excluded from auto-downloading subs')
+                mp.msg.warn('This path is excluded from auto-downloading subtitles')
                 return false
             end
         end
@@ -209,7 +209,7 @@ function autosub_allowed()
 
             if included then break
             elseif i == #includes then
-                mp.msg.warn('This path is not included for auto-downloading subs')
+                mp.msg.warn('This path is not included for auto-downloading subtitles')
                 return false
             end
         end
