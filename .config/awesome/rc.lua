@@ -81,8 +81,7 @@ local function client_menu_toggle_fn()
 end
 -- }}}
 
--- {{{ Menu
--- Menubar configuration
+-- {{{ Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
 
@@ -209,7 +208,7 @@ awful.screen.connect_for_each_screen(function(s)
 end)
 -- }}}
 
--- {{{ Key bindings
+-- {{{ Keybindings
 globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
@@ -428,7 +427,7 @@ clientbuttons = awful.util.table.join(
 root.keys(globalkeys)
 -- }}}
 
--- {{{ Rules
+-- {{{ Client rules
 -- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = {
     -- All clients will match this rule.
@@ -461,7 +460,6 @@ awful.rules.rules = {
           "pinentry",
           "veromix",
           "xtightvncviewer"},
-
         name = {
           "Event Tester",  -- xev.
         },
