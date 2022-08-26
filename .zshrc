@@ -34,6 +34,12 @@ precmd () {
 zstyle ':completion:*' menu select
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' verbose true
+zstyle ':completion:*:approximate:' max-errors 'reply=( $((($#PREFIX+$#SUFFIX)/3 )) numeric )'
+zstyle ':completion:*:correct:*' insert-unambiguous true
+zstyle ':completion:*:correct:*' original true
+zstyle ':completion:*:corrections' format $'%{\e[1;37m%}%d (errors: %e)%{\e[0m%}'
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*:descriptions' format $'%{\e[1;37m%}completing %B%d%b%{\e[0m%}'
 autoload -Uz compinit
 zmodload zsh/complist
 compinit
