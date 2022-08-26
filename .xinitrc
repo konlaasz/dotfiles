@@ -4,13 +4,13 @@
 #
 # vim:ft=sh:ts=4:sw=4:sts=4:fdm=marker
 
-# Logging
-exec > ~/.xinit.log 2>&1
-
-# WM
 DEFAULTWM=awesome
 
-# WM-independent preloaded processes
+# Logging {{{
+exec > ~/.xinit.log 2>&1
+# }}}
+
+# WM-independent preloaded processes {{{
 
 # Audio {{{
 # Pipewire
@@ -44,7 +44,7 @@ keynav daemonize &
 xrdb -merge ~/.Xresources &
 # }}}
 
-# Tray icons, etc. {{{
+# Tray applets, etc. {{{
 # urxvt daemon
 #urxvtd -f -o -q &
 # Volume applet
@@ -55,11 +55,14 @@ pa-applet --disable-notifications &
 chuck > /dev/null 2>&1 &
 # }}}
 
+# }}}
+
+# Start WM {{{
 # use the WM specified as $1, falling back to DEFAULTWM if $1 is empty
 WM=${1:-$DEFAULTWM}
 
 # WM-specific preloaded processes and exec lines
-# exec lines should be closed with ;;
+# exec lines need to be closed with ;;
 case $WM in
     awesome)
         exec awesome ;;
@@ -73,3 +76,4 @@ case $WM in
     qtile)
         exec qtile start ;;
 esac
+# }}}
