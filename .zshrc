@@ -161,8 +161,8 @@ alias conf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # fzf {{{
 
-[ -r /usr/share/fzf/completion.zsh ] && . /usr/share/fzf/completion.zsh
-[ -r /usr/share/fzf/key-bindings.zsh ] && . /usr/share/fzf/key-bindings.zsh
+source ~/.local/share/fzf/completion.zsh
+source ~/.local/share/fzf/key-bindings.zsh
 
 # Rebind ^R to redo in vicmd mode
 bindkey -M vicmd -r "^R"
