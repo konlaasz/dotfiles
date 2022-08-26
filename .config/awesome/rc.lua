@@ -1,3 +1,4 @@
+-- vim:ft=lua:ts=4:sw=4:sts=4:fdm=marker
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
