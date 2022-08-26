@@ -4,7 +4,7 @@
 #
 # vim:ft=sh:ts=4:sw=4:sts=4:fdm=marker
 
-DEFAULTWM=awesome
+WM=awesome
 
 # Logging {{{
 exec > ~/.xinit.log 2>&1
@@ -63,11 +63,7 @@ chuck > /dev/null 2>&1 &
 
 # }}}
 
-# Start WM {{{
-# use the WM specified as $1, falling back to DEFAULTWM if $1 is empty
-WM=${1:-$DEFAULTWM}
-
-# WM-specific preloaded processes and exec lines
+# WM-specific preloaded processes and exec lines {{{
 # exec lines need to be closed with ;;
 case $WM in
     awesome)
