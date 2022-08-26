@@ -18,7 +18,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
     unset SCRIPT
 fi
 
-[ -f ~/.Xresources ] && xrdb -merge ~/.Xresources &
+[ -f ~/.Xresources ] && xrdb -merge ~/.Xresources
 # }}}
 
 # WM-independent preloaded processes {{{
