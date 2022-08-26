@@ -67,7 +67,6 @@ fzf-file-widget() {
 }
 zle     -N            fzf-file-widget
 bindkey -M emacs '^T' fzf-file-widget
-bindkey -M vicmd '^T' fzf-file-widget
 bindkey -M viins '^T' fzf-file-widget
 
 # ALT-C - cd into the selected directory
@@ -90,7 +89,6 @@ fzf-cd-widget() {
 }
 zle     -N             fzf-cd-widget
 bindkey -M emacs '\ec' fzf-cd-widget
-bindkey -M vicmd '\ec' fzf-cd-widget
 bindkey -M viins '\ec' fzf-cd-widget
 
 # CTRL-R - Paste the selected command from history into the command line
@@ -111,7 +109,6 @@ fzf-history-widget() {
 }
 zle     -N            fzf-history-widget
 bindkey -M emacs '^R' fzf-history-widget
-bindkey -M vicmd '^R' fzf-history-widget
 bindkey -M viins '^R' fzf-history-widget
 
 } always {

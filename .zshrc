@@ -145,7 +145,6 @@ GIT_PS1_SHOWUNTRACKEDFILES=true
 
 autoload -U edit-command-line
 zle -N edit-command-line
-bindkey -M vicmd '^e' edit-command-line
 bindkey -M viins '^e' edit-command-line
 
 # }}}
@@ -163,10 +162,6 @@ alias conf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 source ~/.local/share/fzf/completion.zsh
 source ~/.local/share/fzf/key-bindings.zsh
-
-# Rebind ^R to redo in vicmd mode
-bindkey -M vicmd -r "^R"
-bindkey -M vicmd "^R" redo
 
 #}}}
 
