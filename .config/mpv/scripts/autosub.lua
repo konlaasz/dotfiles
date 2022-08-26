@@ -132,7 +132,7 @@ function control_downloads()
     mp.set_property('sub-auto', 'fuzzy')
     -- Set subtitle language preference:
     mp.set_property('slang', languages[1][2])
-    mp.msg.warn('Reactivate external subtitle files:')
+    mp.msg.warn('Reactivating external subtitle files')
     mp.commandv('rescan_external_files')
     directory, filename = utils.split_path(mp.get_property('path'))
 
