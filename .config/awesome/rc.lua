@@ -223,11 +223,7 @@ globalkeys = awful.util.table.join(
               {description="show help", group="awesome"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
-    awful.key({ modkey,           }, ",",   awful.tag.viewprev,
-              {description = "view previous", group = "tag"}),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
-              {description = "view next", group = "tag"}),
-    awful.key({ modkey,           }, ".",  awful.tag.viewnext,
               {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
@@ -318,6 +314,12 @@ globalkeys = awful.util.table.join(
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"}),
+
+    -- Non-empty tag browsing
+    awful.key({ modkey }, ",", function () lain.util.tag_view_nonempty(-1) end,
+              {description = "view previous non-empty", group = "tag"}),
+    awful.key({ modkey }, ".", function () lain.util.tag_view_nonempty(1) end,
+              {description = "view next non-empty", group = "tag"}),
 
     -- Backlight control
     awful.key({ }, "XF86MonBrightnessUp", function () brightness_widget:inc() end, {description = "increase screen brightness", group = "screen"}),
