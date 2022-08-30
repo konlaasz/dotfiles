@@ -11,12 +11,21 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
+
+-- Lain Layouts, widgets and utilities
+local lain = require("lain")
+
 -- Battery widget
 local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
+
 -- Brightness widget
 local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
+
 -- Volume widget
 --local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
+
+-- Quake-like dropdown terminal
+local quake = lain.util.quake({ app = "urxvt" })
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -325,6 +334,9 @@ globalkeys = awful.util.table.join(
     --awful.key({ }, "XF86AudioRaiseVolume", function() awful.spawn("pw-volume change +2%") end, {description = "raise volume", group = "audio"}),
     --awful.key({ }, "XF86AudioLowerVolume", function() awful.spawn("pw-volume change -2%") end, {description = "lower volume", group = "audio"}),
     --awful.key({ }, "XF86AudioMute", function() awful.spawn("pw-volume mute toggle") end, {description = "toggle mute", group = "audio"}),
+
+    -- Hide/show dropdown terminal
+    awful.key({ modkey, }, "q", function () quake:toggle() end),
 
     -- Hide/show wibox
     awful.key({ modkey }, "b",
