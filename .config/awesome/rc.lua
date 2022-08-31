@@ -86,10 +86,10 @@ awful.layout.layouts = {
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
 
+-- {{{ Wibar
 -- Keyboard map indicator and switcher
 mykeyboardlayout = awful.widget.keyboardlayout()
 
--- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock(" %y.%m.%d %V.%u %H:%M ")
 
