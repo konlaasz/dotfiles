@@ -40,8 +40,7 @@ xset s 180 &
 # Set xkb layout
 setxkbmap -layout 'us,dk,hu(qwerty)' -option 'grp:alt_shift_toggle' &
 # Per-window keyboard layout switching
-gxkb > /dev/null 2>&1 &
-#kbdd &
+kbdd &
 # Autorepeat for faster navigation
 #xset r rate 300 50 &
 # Keyboard navigation
