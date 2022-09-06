@@ -25,7 +25,7 @@ fi
 
 # Audio {{{
 # Pipewire
-systemctl --user start pipewire-pulse.service &
+systemctl --user start pipewire-pulse.service
 # }}}
 
 # Video {{{
