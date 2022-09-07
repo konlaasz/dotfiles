@@ -32,7 +32,7 @@ local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightne
 --local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 
 -- Quake-like dropdown terminal
-local quake = lain.util.quake({ app = "urxvt", height = 0.30 })
+local quake = lain.util.quake({ app = "urxvt", height = 0.40 })
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
