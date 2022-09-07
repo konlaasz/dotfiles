@@ -225,6 +225,10 @@ globalkeys = gears.table.join(
               {description = "open a terminal", group = "launcher"}),
 
     -- Tag switching
+    awful.key({ modkey, "Shift"   }, ",",   awful.tag.viewprev,
+              {description = "view previous", group = "tag"}),
+    awful.key({ modkey, "Shift"   }, ".",  awful.tag.viewnext,
+              {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
