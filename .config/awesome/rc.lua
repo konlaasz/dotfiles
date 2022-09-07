@@ -213,7 +213,7 @@ end)
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
-    awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
+    awful.key({ modkey,           }, "s", hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
@@ -225,9 +225,9 @@ globalkeys = gears.table.join(
               {description = "open a terminal", group = "launcher"}),
 
     -- Tag switching
-    awful.key({ modkey, "Shift"   }, ",",   awful.tag.viewprev,
+    awful.key({ modkey, "Shift"   }, ",",      awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
-    awful.key({ modkey, "Shift"   }, ".",  awful.tag.viewnext,
+    awful.key({ modkey, "Shift"   }, ".",      awful.tag.viewnext,
               {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
