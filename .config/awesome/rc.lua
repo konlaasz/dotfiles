@@ -356,13 +356,25 @@ globalkeys = gears.table.join(
     --awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn("light -A 5") end, {description = "decrease screen brightness", group = "screen"})
 
     -- Volume control
+    awful.key({ }, "XF86AudioRaiseVolume",
+        function()
+            awful.spawn("pulsemixer --change-volume +5")
+        end,
+        {description = "raise volume", group = "audio"}),
+    awful.key({ }, "XF86AudioLowerVolume",
+        function()
+            awful.spawn("pulsemixer --change-volume -5")
+        end,
+        {description = "lower volume", group = "audio"}),
+    awful.key({ }, "XF86AudioMute",
+        function()
+            awful.spawn("pulsemixer --toggle-mute")
+        end,
+        {description = "toggle mute", group = "audio"}),
+
     --awful.key({ }, "XF86AudioRaiseVolume", function() volume_widget:inc() end, {description = "raise volume", group = "audio"}),
     --awful.key({ }, "XF86AudioLowerVolume", function() volume_widget:dec() end, {description = "lower volume", group = "audio"}),
     --awful.key({ }, "XF86AudioMute", function() volume_widget:toggle() end, {description = "toggle mute", group = "audio"}),
-
-    --awful.key({ }, "XF86AudioRaiseVolume", function() awful.spawn("pw-volume change +2%") end, {description = "raise volume", group = "audio"}),
-    --awful.key({ }, "XF86AudioLowerVolume", function() awful.spawn("pw-volume change -2%") end, {description = "lower volume", group = "audio"}),
-    --awful.key({ }, "XF86AudioMute", function() awful.spawn("pw-volume mute toggle") end, {description = "toggle mute", group = "audio"}),
 
     -- Dropdown terminal
     awful.key({ modkey, }, "q", function () quake:toggle() end),

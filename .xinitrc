@@ -53,7 +53,7 @@ keynav daemonize &
 # urxvt daemon
 #urxvtd -f -o -q &
 # Volume applet
-pa-applet --disable-notifications &
+#pa-applet --disable-notifications &
 # battery icon
 #cbatticon -u 17 -i standard -c "systemctl suspend" -l 15 -r 6 &
 # check package updates
