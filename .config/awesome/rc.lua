@@ -211,7 +211,7 @@ globalkeys = gears.table.join(
               {description = "quit awesome", group = "awesome"}),
 
     -- Terminal
-    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
+    awful.key({ modkey,           }, "Return", function () awful.spawn.with_shell(terminal) end,
               {description = "open a terminal", group = "launcher"}),
 
     -- Tag switching
@@ -333,23 +333,23 @@ globalkeys = gears.table.join(
               {description = "show the menubar", group = "launcher"}),
 
     -- Backlight control
-    awful.key({ }, "XF86MonBrightnessDown", function () awful.spawn("light -U 5") end, {description = "increase screen brightness", group = "screen"}),
-    awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn("light -A 5") end, {description = "decrease screen brightness", group = "screen"}),
+    awful.key({ }, "XF86MonBrightnessDown", function () awful.spawn.with_shell("light -U 5") end, {description = "increase screen brightness", group = "screen"}),
+    awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn.with_shell("light -A 5") end, {description = "decrease screen brightness", group = "screen"}),
 
     -- Volume control
     awful.key({ }, "XF86AudioRaiseVolume",
         function()
-            awful.spawn("pulsemixer --change-volume +5")
+            awful.spawn.with_shell("pulsemixer --change-volume +5")
         end,
         {description = "raise volume", group = "audio"}),
     awful.key({ }, "XF86AudioLowerVolume",
         function()
-            awful.spawn("pulsemixer --change-volume -5")
+            awful.spawn.with_shell("pulsemixer --change-volume -5")
         end,
         {description = "lower volume", group = "audio"}),
     awful.key({ }, "XF86AudioMute",
         function()
-            awful.spawn("pulsemixer --toggle-mute")
+            awful.spawn.with_shell("pulsemixer --toggle-mute")
         end,
         {description = "toggle mute", group = "audio"}),
 
