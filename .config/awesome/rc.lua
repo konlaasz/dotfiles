@@ -25,9 +25,6 @@ local lain = require("lain")
 -- Battery widget
 local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
 
--- Brightness widget
-local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
-
 -- Volume widget
 --local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 
@@ -195,13 +192,6 @@ awful.screen.connect_for_each_screen(function(s)
             --    step = 2,
             --    thickness = 2,
             --    device = 'pipewire'},
-            brightness_widget{
-                type = 'arc',
-                program = 'light',
-                step = 5,
-                timeout = 67,
-                percentage = true,
-                tooltip = true },
             batteryarc_widget({
                 show_current_level = true,
                 arc_thickness = 2,}),
@@ -343,11 +333,8 @@ globalkeys = gears.table.join(
               {description = "show the menubar", group = "launcher"}),
 
     -- Backlight control
-    awful.key({ }, "XF86MonBrightnessUp", function () brightness_widget:inc() end, {description = "increase screen brightness", group = "screen"}),
-    awful.key({ }, "XF86MonBrightnessDown", function () brightness_widget:dec() end, {description = "decrease screen brightness", group = "screen"}),
-
-    --awful.key({ }, "XF86MonBrightnessDown", function () awful.spawn("light -U 5") end, {description = "increase screen brightness", group = "screen"}),
-    --awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn("light -A 5") end, {description = "decrease screen brightness", group = "screen"})
+    awful.key({ }, "XF86MonBrightnessDown", function () awful.spawn("light -U 5") end, {description = "increase screen brightness", group = "screen"}),
+    awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn("light -A 5") end, {description = "decrease screen brightness", group = "screen"}),
 
     -- Volume control
     awful.key({ }, "XF86AudioRaiseVolume",
