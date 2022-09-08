@@ -184,7 +184,7 @@ function autosub_allowed()
         mp.msg.warn('Automatic subtitle downloading is disabled for cue files')
         return false
     else
-        local not_allowed = {'aiff', 'ape', 'flac', 'mp3', 'ogg', 'wav', 'wv', 'tta'}
+        local not_allowed = {'aiff', 'ape', 'flac', 'm4a', 'mp3', 'ogg', 'wav', 'wv', 'tta'}
 
         for _, file_format in pairs(not_allowed) do
             if file_format == active_format then
