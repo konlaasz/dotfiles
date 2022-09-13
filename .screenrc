@@ -156,5 +156,5 @@ defscrollback 1000
 ## blankerprg rain -d 100
 ## idle 30 blanker
 
-hardstatus alwayslastline '%{= G}[ %{G}%H %{g}][%= %{= w}%?%-Lw%?%{= R}%n*%f %t%?%{= R}(%u)%?%{= w}%+Lw%?%= %{= g}][ %{y}Load: %l %{g}][%{B}%Y-%m-%d %{W}%c:%s %{g}]'
-#hardstatus alwayslastline '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W} %c %{g}]'
+hardstatus alwayslastline '%{= w}[ %{K}%H %{w}][%= %{w}%?%-Lw%?%{R}%n*%f %t%?%{R}(%u)%?%{w}%+Lw%?%= %{w}][ %{y}%l %{w}][ %{B}%y.%m.%d %{W}%c %{w}]'
+#hardstatus alwayslastline '%{= kw}[ %{K}%H %{w}][%= %{= w}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{w}][%{B} %y.%m.%d %{W} %c %{w}]'
