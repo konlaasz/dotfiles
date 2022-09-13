@@ -36,7 +36,7 @@ xset s 180 &
 #xset dpms 0 0 120
 # }}}
 
-# Keyboard {{{
+# Keyboard & mouse {{{
 # Set xkb layout
 setxkbmap -layout 'us,dk,hu(qwerty)' -option 'grp:alt_shift_toggle' &
 # Per-window keyboard layout switching
@@ -47,6 +47,8 @@ kbdd &
 keynav daemonize &
 # Disable the touchpad when typing
 #syndaemon &
+# Hide the mouse cursor when it isn't being used
+unclutter -b &
 # }}}
 
 # Tray applets, etc. {{{
