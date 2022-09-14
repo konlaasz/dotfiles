@@ -7,6 +7,7 @@ git init --bare $HOME/.dotfiles
 alias conf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 echo "alias conf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.{ba,z}shrc
 conf config --local status.showUntrackedFiles no
+conf remote add origin git@github.com:konlaasz/dotfiles.git
 ```
 
 ### New install:
