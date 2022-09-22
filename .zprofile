@@ -20,7 +20,7 @@ export XDG_MUSIC_DIR="$HOME/Music"
 export XDG_PICTURES_DIR="$HOME/Pictures"
 export XDG_VIDEOS_DIR="$HOME/Videos"
 
-export CHECKUPDATES_DB=$HOME/.cache/checkupdates
+export CHECKUPDATES_DB=$XDG_CACHE_HOME/checkupdates
 
 # X login on tty1 (using startx - xinit doesn't read xserverrc)
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
