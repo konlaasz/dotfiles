@@ -33,7 +33,7 @@ systemctl --user start pipewire-pulse.service
 redshift > /dev/null 2>&1 &
 # Screen blanking
 xset s 180 &
-#xset dpms 0 0 120
+xset -dpms &
 # }}}
 
 # Keyboard & mouse {{{
