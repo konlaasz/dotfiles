@@ -96,7 +96,7 @@ alias grep='grep --color=auto'
 alias less='less -iM'
 alias ls='ls --color=auto'
 alias pgrep='pgrep -afl'
-alias ping='ping -c 3'
+alias ping='ping -c 5'
 
 # }}}
 
