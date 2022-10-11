@@ -4,7 +4,7 @@ set titlestring=VIM:\ %-25.55F\ %a%r%m titlelen=70
 
 set encoding=utf-8
 
-set history=500
+set history=5000
 
 if &t_Co =~ "256"
     colorscheme zenburn
