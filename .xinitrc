@@ -32,8 +32,7 @@ systemctl --user start pipewire-pulse.service
 # Blue light filter
 redshift > /dev/null 2>&1 &
 # Screen blanking
-xset s 180 &
-xset -dpms &
+xset s 180 0 s blank s expose dpms 0 0 0 -dpms &
 # }}}
 
 # Keyboard & mouse {{{
