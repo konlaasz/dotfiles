@@ -6,5 +6,3 @@ run() {
     "$@"&
   fi
 }
-
-setxkbmap -option 'compose:caps' &

@@ -37,7 +37,12 @@ xset s 180 0 s blank s expose dpms 0 0 0 -dpms &
 
 # Keyboard & mouse {{{
 # Set xkb layout
-setxkbmap -layout 'us,dk,hu(qwerty)' -option 'grp:alt_shift_toggle' &
+setxkbmap -layout 'us,dk,hu(qwerty)' -option 'grp:alt_shift_toggle'
+# Turn CapsLock into Compose
+setxkbmap -option 'compose:caps'
+# Adjust keymap
+# NOTE: xmodmap settings are reset by setxkbmap
+[ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap
 # Per-window keyboard layout switching
 kbdd &
 # Autorepeat for faster navigation
