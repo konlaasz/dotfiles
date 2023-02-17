@@ -162,6 +162,7 @@ bindkey -M viins '^e' edit-command-line
 # see: https://github.com/Siilwyn/my-dotfiles/tree/master/.my-dotfiles
 
 alias conf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias confed="GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME vim"
 # }}}
 
 # fzf {{{
