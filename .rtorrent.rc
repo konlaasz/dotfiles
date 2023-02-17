@@ -1,4 +1,4 @@
-#############################################################################
+################################################################################
 # This is an (old) example resource file for rTorrent.
 # Copy to ~/.rtorrent.rc and enable/modify the options as needed.
 # Remember to uncomment the options you wish to enable.
@@ -12,23 +12,29 @@
 #  Convert: https://github.com/rakshasa/rtorrent/wiki/rTorrent-0.9-Comprehensive-Command-list-(WIP)
 # Handbook: https://media.readthedocs.org/pdf/rtorrent-docs/latest/rtorrent-docs.pdf
 #     File: https://github.com/rakshasa/rtorrent/blob/master/doc/rtorrent.rc
-#############################################################################
+################################################################################
 
 # Colors
-#   Options: color_inactive_fg, color_inactive_bg, color_dead_fg, color_dead_bg,
-#            color_active_fg, color_active_bg, color_finished_fg, color_finished_bg,
+#  Options: color_active_fg, color_inactive_fg, color_dead_fg, color_finished_fg
+#           color_active_bg, color_inactive_bg, color_dead_bg, color_finished_bg
 #
-#   Colors: 0 = black 1 = red 2 = green 3 = yellow 4 = blue 5 = magenta 6 = cyan 7 = white
+#   Colors: 0 = black
+#           1 = red
+#           2 = green
+#           3 = yellow
+#           4 = blue
+#           5 = magenta
+#           6 = cyan
+#           7 = white
+#
+# Inactive: Deactivated torrent
+#     Dead: Active but can't find seeders
+#   Active: Active and downloading
+# Finished: Download done
+# If the torrent is highlighted (using bold text) you're uploading data
 
-#   Inactive: Deactivated torrent
-#   Dead:     Active but can't find seeders
-#   Active:   Active and downloading
-#   Finished: Download done
-#   If the torrent is highlighted (using bold text) you're uploading data
-
-color_inactive_fg = 4
-color_dead_fg = 1
 color_active_fg = 3
+color_dead_fg = 1
 color_finished_fg = 2
 
 # Maximum and minimum number of peers to connect to per torrent.
