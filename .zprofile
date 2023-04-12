@@ -5,9 +5,9 @@
 
 export PATH=$PATH:$HOME/.local/bin
 
-export EDITOR=vim
+export EDITOR=/usr/bin/vim
 export VISUAL=$EDITOR
-export BROWSER=firefox
+export BROWSER=/usr/bin/firefox
 
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
