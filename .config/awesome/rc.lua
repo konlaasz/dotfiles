@@ -349,15 +349,20 @@ globalkeys = gears.table.join(
         end,
         {description = "toggle mute", group = "audio"}),
 
-    --awful.key({ }, "XF86AudioRaiseVolume", function() volume_widget:inc() end, {description = "raise volume", group = "audio"}),
-    --awful.key({ }, "XF86AudioLowerVolume", function() volume_widget:dec() end, {description = "lower volume", group = "audio"}),
-    --awful.key({ }, "XF86AudioMute", function() volume_widget:toggle() end, {description = "toggle mute", group = "audio"}),
+    -- MPD control
+    awful.key({ }, "XF86AudioPlay", function() awful.spawn.with_shell("mpc -q toggle") end, {description = "play/pause", group = "audio"}),
+    awful.key({ }, "XF86AudioStop", function() awful.spawn.with_shell("mpc -q stop") end, {description = "stop", group = "audio"}),
+    awful.key({ }, "XF86AudioPrev", function() awful.spawn.with_shell("mpc -q prev") end, {description = "previous", group = "audio"}),
+    awful.key({ }, "XF86AudioNext", function() awful.spawn.with_shell("mpc -q next") end, {description = "next", group = "audio"}),
 
     -- Dropdown terminal
-    awful.key({ modkey, }, "q", function () quake:toggle() end),
+    awful.key({ modkey, }, "q", function () quake:toggle() end, {description = "dropdown terminal", group = "misc"}),
+
+    -- MPD info
+    awful.key({ modkey, }, "i", function () awful.spawn.with_shell("notify-send -e \"MPD playing:\" \"$(mpc -q current)\"") end, {description = "MPD info", group = "audio"}),
 
     -- Hide/show wibox
-    awful.key({ modkey }, "b",
+    awful.key({ modkey }, "w",
        function ()
           myscreen = awful.screen.focused()
           myscreen.mywibox.visible = not myscreen.mywibox.visible
