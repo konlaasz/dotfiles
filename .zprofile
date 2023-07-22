@@ -12,6 +12,7 @@ export BROWSER=/usr/bin/firefox
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
 
 export XDG_DESKTOP_DIR="$HOME/Desktop"
 export XDG_DOCUMENTS_DIR="$HOME/Documents"
@@ -21,6 +22,8 @@ export XDG_PICTURES_DIR="$HOME/Pictures"
 export XDG_VIDEOS_DIR="$HOME/Videos"
 
 export CHECKUPDATES_DB=$XDG_CACHE_HOME/checkupdates
+
+export MPC_FORMAT="[[%artist%: ]%title%]\n[%album%][ (%date%)]"
 
 # X login on tty1 (using startx - xinit doesn't read xserverrc)
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
