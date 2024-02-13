@@ -29,4 +29,5 @@ export MPC_FORMAT="[[%artist%: ]%title%]\n[%album%][ (%date%)]"
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
 
 # Wayland login on tty2
-[[ -z $DISPLAY && $XDG_VTNR -eq 2 ]] && exec qtile start -b wayland
+#[[ -z $DISPLAY && $XDG_VTNR -eq 2 ]] && exec qtile start -b wayland
+[[ -z $DISPLAY && $XDG_VTNR -eq 2 ]] && exec Hyprland
