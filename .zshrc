@@ -98,6 +98,8 @@ alias ls='ls --color=auto'
 alias pgrep='pgrep -afl'
 alias ping='ping -c 5'
 
+alias m2t='aria2c --bt-metadata-only=true --bt-save-metadata=true'
+
 # }}}
 
 # Cursor {{{
