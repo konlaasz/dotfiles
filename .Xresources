@@ -4,11 +4,11 @@
 ! vim:fdm=marker
 
 !{{{ Xcursor
-Xcursor.size:  16
+Xcursor.size:  32
 !}}}
 
 !{{{ Xft
-Xft.dpi:        96
+Xft.dpi:        144
 Xft.antialias:  true
 Xft.autohint:   false
 Xft.hinting:    true
@@ -34,10 +34,10 @@ URxvt.visualBell:       true
 URxvt.reverseVideo:     false
 URxvt.saveLines:        20000
 
-URxvt.font:             xft:Hack:style=Regular:pixelsize=13
-URxvt.boldFont:         xft:Hack:style=Bold:pixelsize=13
-URxvt.italicFont:       xft:Hack:style=Italic:pixelsize=13
-URxvt.boldItalicFont:   xft:Hack:style=BoldItalic:pixelsize=13
+URxvt.font:             xft:Hack:style=Regular:pixelsize=20
+URxvt.boldFont:         xft:Hack:style=Bold:pixelsize=20
+URxvt.italicFont:       xft:Hack:style=Italic:pixelsize=20
+URxvt.boldItalicFont:   xft:Hack:style=BoldItalic:pixelsize=20
 URxvt.letterSpace:      -1
 
 ! ISO 14755 mode
