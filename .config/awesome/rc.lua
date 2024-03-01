@@ -350,10 +350,17 @@ globalkeys = gears.table.join(
         {description = "toggle mute", group = "audio"}),
 
     -- MPD control
+    -- Media keys
     awful.key({ }, "XF86AudioPlay", function() awful.spawn.with_shell("mpc -q toggle") end, {description = "play/pause", group = "audio"}),
     awful.key({ }, "XF86AudioStop", function() awful.spawn.with_shell("mpc -q stop") end, {description = "stop", group = "audio"}),
     awful.key({ }, "XF86AudioPrev", function() awful.spawn.with_shell("mpc -q prev") end, {description = "previous", group = "audio"}),
     awful.key({ }, "XF86AudioNext", function() awful.spawn.with_shell("mpc -q next") end, {description = "next", group = "audio"}),
+    -- Control + Modkey + [zxcvb]
+    awful.key({ modkey, "Control" }, "z", function () awful.spawn.with_shell("mpc -q prev") end, {description = "previous", group = "audio"}),
+    awful.key({ modkey, "Control" }, "x", function () awful.spawn.with_shell("mpc -q play") end, {description = "play", group = "audio"}),
+    awful.key({ modkey, "Control" }, "c", function () awful.spawn.with_shell("mpc -q toggle") end, {description = "play/pause", group = "audio"}),
+    awful.key({ modkey, "Control" }, "v", function () awful.spawn.with_shell("mpc -q stop") end, {description = "stop", group = "audio"}),
+    awful.key({ modkey, "Control" }, "b", function () awful.spawn.with_shell("mpc -q next") end, {description = "next", group = "audio"}),
 
     -- Dropdown terminal
     awful.key({ modkey, }, "q", function () quake:toggle() end, {description = "dropdown terminal", group = "misc"}),
