@@ -329,8 +329,8 @@ globalkeys = gears.table.join(
               {description = "show the menubar", group = "launcher"}),
 
     -- Backlight control
-    awful.key({ }, "XF86MonBrightnessDown", function () awful.spawn.with_shell("light -U 5") end, {description = "increase screen brightness", group = "screen"}),
-    awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn.with_shell("light -A 5") end, {description = "decrease screen brightness", group = "screen"}),
+    awful.key({ }, "XF86MonBrightnessDown", function () awful.spawn.with_shell("light -U 2") end, {description = "increase screen brightness", group = "screen"}),
+    awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn.with_shell("light -A 2") end, {description = "decrease screen brightness", group = "screen"}),
 
     -- Volume control
     awful.key({ }, "XF86AudioRaiseVolume",
