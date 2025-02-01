@@ -120,11 +120,12 @@ keys = [
     Key([], "XF86MonBrightnessDown", lazy.spawn("light -U 5")),
     Key([], "XF86MonBrightnessUp", lazy.spawn("light -A 5")),
 
-    Key([mod], 'z', lazy.spawn('cmus-remote --prev')),
-    Key([mod], 'x', lazy.spawn('cmus-remote --play')),
-    Key([mod], 'c', lazy.spawn('cmus-remote --pause')),
-    Key([mod], 'v', lazy.spawn('cmus-remote --stop')),
-    Key([mod], 'b', lazy.spawn('cmus-remote --next')),
+    # Control MPD
+    Key([mod], 'z', lazy.spawn('mpc -q prev')),
+    Key([mod], 'x', lazy.spawn('mpc -q play')),
+    Key([mod], 'c', lazy.spawn('mpc -q toggle')),
+    Key([mod], 'v', lazy.spawn('mpc -q stop')),
+    Key([mod], 'b', lazy.spawn('mpc -q next')),
 ]
 
 groups = [
