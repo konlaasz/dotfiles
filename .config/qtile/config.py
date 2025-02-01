@@ -110,6 +110,7 @@ keys = [
     Key([mod, "control"], "r", lazy.restart(), desc="Restart Qtile"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(),
+    Key([mod], "p", lazy.spawncmd(),
         desc="Spawn a command using a prompt widget"),
     Key([mod], 's', lazy.spawn('slock')),
 
