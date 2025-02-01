@@ -25,9 +25,20 @@ export CHECKUPDATES_DB=$XDG_CACHE_HOME/checkupdates
 
 export MPC_FORMAT="[[%artist%: ]%title%]\n[%album%][ (%date%)]"
 
-# X login on tty1 (using startx - xinit doesn't read xserverrc)
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+# niri @ tty1
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec niri --session
 
-# Wayland login on tty2
-#[[ -z $DISPLAY && $XDG_VTNR -eq 2 ]] && exec qtile start -b wayland
-[[ -z $DISPLAY && $XDG_VTNR -eq 2 ]] && exec Hyprland
+# sway (Wayland) @ tty2
+[[ -z $DISPLAY && $XDG_VTNR -eq 2 ]] && exec sway
+
+# Hyprland (Wayland) @ tty3
+[[ -z $DISPLAY && $XDG_VTNR -eq 3 ]] && exec Hyprland
+
+# qtile (Wayland) @ tty4
+[[ -z $DISPLAY && $XDG_VTNR -eq 4 ]] && exec qtile start -b wayland
+
+# awesome (X) @ tty5 (using startx - xinit doesn't read xserverrc)
+[[ -z $DISPLAY && $XDG_VTNR -eq 5 ]] && exec startx
+
+# cage @ tty6
+[[ -z $DISPLAY && $XDG_VTNR -eq 6 ]] && exec cage -- OpenKiosk --kiosk
