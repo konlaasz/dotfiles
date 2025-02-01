@@ -66,7 +66,7 @@ bindkey -M menuselect '^[' undo
 
 # History {{{
 
-HISTFILE=~/.zsh_history
+HISTFILE=~/.zhistory
 HISTSIZE=50001
 SAVEHIST=50000
 
