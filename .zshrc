@@ -208,3 +208,24 @@ ranger-cd () {
 bindkey -s '^o' ' ranger-cd\n'
 
 # }}}
+
+# yazi {{{
+
+# Use yazi to switch directories
+yazi-cd () {
+    local TMP="$(mktemp /tmp/yazi.dir.XXXXXXXXXX)"
+    /usr/bin/yazi --cwd-file="$TMP" "${@:-${PWD}}"
+    if [ -f "$TMP" ]; then
+        local DIR="$(<"$TMP")"
+        rm -f "$TMP"
+        if [ -d "$DIR" ]; then
+            if [ "$DIR" != "$PWD" ]; then
+                cd "$DIR"
+            fi
+        fi
+    fi
+}
+# Bind Ctrl-Y to yazi-cd:
+bindkey -s '^y' ' yazi-cd\n'
+
+# }}}
