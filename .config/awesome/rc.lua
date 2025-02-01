@@ -29,7 +29,7 @@ local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batterya
 --local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 
 -- Quake-like dropdown terminal
-local quake = lain.util.quake({ app = "urxvt", height = 0.40 })
+local quake = lain.util.quake({ app = "urxvt", height = 0.50 })
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
