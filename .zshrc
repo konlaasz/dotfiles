@@ -229,3 +229,9 @@ yazi-cd () {
 bindkey -s '^y' ' yazi-cd\n'
 
 # }}}
+
+# zoxide {{{
+
+eval "$(zoxide init zsh)"
+
+# }}}
