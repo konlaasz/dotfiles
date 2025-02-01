@@ -37,7 +37,7 @@ mod = "mod4"
 if qtile.core.name == "x11":
     terminal = "urxvt"
 elif qtile.core.name == "wayland":
-    terminal = "kitty"
+    terminal = "foot"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
