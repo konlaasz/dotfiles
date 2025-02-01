@@ -113,12 +113,14 @@ keys = [
         desc="Spawn a command using a prompt widget"),
     Key([mod], 's', lazy.spawn('slock')),
 
-#    Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer -i 5")),
-#    Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer -d 5")),
-#    Key([], "XF86AudioMute", lazy.spawn("pamixer -t")),
+    # Control screen brightness
+    Key([], "XF86MonBrightnessDown", lazy.spawn("light -U 2")),
+    Key([], "XF86MonBrightnessUp", lazy.spawn("light -A 2")),
 
-    Key([], "XF86MonBrightnessDown", lazy.spawn("light -U 5")),
-    Key([], "XF86MonBrightnessUp", lazy.spawn("light -A 5")),
+    # Control audio volume
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("pulsemixer --change-volume +5")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("pulsemixer --change-volume -5")),
+    Key([], "XF86AudioMute", lazy.spawn("pulsemixer --toggle-mute")),
 
     # Control MPD
     Key([mod], 'z', lazy.spawn('mpc -q prev')),
