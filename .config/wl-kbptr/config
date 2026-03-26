@@ -1,0 +1,20 @@
+#
+# ~/.wl-kbptr/config
+#
+
+[general]
+modes=floating,click
+
+[mode_click]
+button=left
+
+[mode_floating]
+source=detect
+label_color=#fffd
+label_select_color=#108d
+unselectable_bg_color=#2226
+selectable_bg_color=#2237
+selectable_border_color=#fff3
+label_font_family=sans-serif
+label_font_size=15 50% 100
+label_symbols=abcdefghijklmnopqrstuvwxyz
