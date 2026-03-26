@@ -31,6 +31,8 @@ precmd () {
 
 # Completion {{{
 
+fpath=(~/.local/share/zsh/functions/Completion $fpath)
+
 zstyle ':completion:*' menu select
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' verbose true
@@ -45,7 +47,6 @@ zmodload zsh/complist
 compinit
 
 # Git completion
-fpath=(~/.local/share/zsh/functions/Completion $fpath)
 # Do not include "DWIM" suggestions in git-checkout and git-switch completion.
 GIT_COMPLETION_CHECKOUT_NO_GUESS=1
 # Suggest all options, including options which are typically hidden.
@@ -95,10 +96,10 @@ alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
 alias less='less -iM'
 alias ls='ls --color=auto'
+alias m2t='aria2c --bt-metadata-only=true --bt-save-metadata=true'
 alias pgrep='pgrep -afl'
 alias ping='ping -c 5'
-
-alias m2t='aria2c --bt-metadata-only=true --bt-save-metadata=true'
+alias view='vim -R'
 
 # }}}
 
